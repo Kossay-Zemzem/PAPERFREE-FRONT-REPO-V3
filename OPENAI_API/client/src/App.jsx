@@ -72,11 +72,11 @@ function App() {
       </header>
       <div className="image-upload-container h-full flex items-center align-middle justify-center ">
 
-        <form onSubmit={SendRequestToChat} class="max-lg mx-auto">
+        <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
   
-          <div class="mb-5">
-            <input placeholder='Prenom' type="name" id="name" 
-            class="bg-custom-dark border
+          <div className="mb-5">
+            <input placeholder='Prenom' type="text" id="prenom" 
+            className="bg-custom-dark border
              border-custom-border
              text-zinc-200 text-sm rounded-lg
              focus:ring-blue-500
@@ -91,36 +91,59 @@ function App() {
              
              "required />
           </div>
-          <div class="mb-5">
-
-            <input placeholder='Nom' type="surname" id="surname" class="bg-custom-dark border border-custom-border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500  placeholder:text-center hover:scale-110 ease-in-out duration-300" required />
-          </div>
-          <div class="mb-5">
-
-            <input placeholder='Numero carte identité' type="text" id="id" inputMode='numeric' maxLength={8}
-            class="
-
-            bg-custom-dark border border-custom-border 
-            text-gray-900 text-sm rounded-lg 
-            focus:ring-blue-500 
-            focus:border-blue-500 block w-full p-2.5 
-            dark:bg-gray-700 
-            dark:border-gray-600 
-            dark:placeholder-gray-400 
-            dark:text-white 
-            dark:focus:ring-blue-500 
-            dark:focus:border-blue-500 placeholder:text-center hover:scale-110 ease-in-out duration-300
-            " required />
+          <div className="mb-5">
+            <input placeholder='Nom' type="text" id="prenom" 
+            className="bg-custom-dark border
+             border-custom-border
+             text-zinc-200 text-sm rounded-lg
+             focus:ring-blue-500
+             focus:border-blue-500 block w-full p-2.5
+             dark:bg-gray-700
+             dark:border-gray-600
+             dark:placeholder-gray-400
+             dark:text-white
+             dark:focus:ring-blue-500
+             dark:focus:border-blue-500 
+             placeholder:text-center hover:scale-110 ease-in-out duration-300
+             
+             "required />
           </div>
 
+          <div className="mb-5">
+            <input placeholder='Numero Carte identité' type="text" id="prenom" 
+            className="bg-custom-dark border
+             border-custom-border
+             text-zinc-200 text-sm rounded-lg
+             focus:ring-blue-500
+             focus:border-blue-500 block w-full p-2.5
+             dark:bg-gray-700
+             dark:border-gray-600
+             dark:placeholder-gray-400
+             dark:text-white
+             dark:focus:ring-blue-500
+             dark:focus:border-blue-500 
+             placeholder:text-center hover:scale-110 ease-in-out duration-300
+             
+             "required />
+          </div>
 
-
-          <div >
+          <div>
             <input
               type="file"
               accept="image/png,image/jpeg"
               onChange={handleFileChange}
-              className="h-48 bg-custom-dark rounded-lg cursor-pointer"
+              className=" h-14 
+              bg-custom-dark rounded-lg 
+              cursor-pointer
+              file:h-14 
+              file:mr-4 file:py-2 file:px-4
+              file:border-0
+              file:text-sm file:font-semibold
+              file:bg-gradient-to-r from-yellow-500 to-orange-500
+              hover:bg-gray-500 ease-in-out duration-500
+              file:text-white
+              hover:scale-110 ease-in-out duration-300
+              "
             />
 
           </div>
@@ -128,7 +151,7 @@ function App() {
 {/*           <div className='mt-3 flex justify-center'>
 
             <button type="submit" 
-            class="text-white bg-gradient-button
+            className="text-white bg-gradient-button
              hover:bg-blue-800 
              focus:ring-4 
              focus:outline-none 
@@ -147,7 +170,7 @@ function App() {
             <div className='mt-3 flex justify-center'>
 
             <button type="submit" 
-            class="text-black
+            className="text-black
             bg-white
 
             hover: ease-in-out duration-500
