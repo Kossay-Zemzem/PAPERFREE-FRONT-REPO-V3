@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import './App.css';
-import axios from 'axios'
+import React, { useState } from "react";
+import "./App.css";
+import axios from "axios";
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
@@ -9,9 +9,9 @@ function App() {
     const file = event.target.files[0];
 
     // Validate file type (PNG or JPG)
-    const acceptedTypes = ['image/png', 'image/jpeg'];
+    const acceptedTypes = ["image/png", "image/jpeg"];
     if (!acceptedTypes.includes(file.type)) {
-      alert('Please select a PNG or JPG image file.');
+      alert("Please select a PNG or JPG image file.");
       return;
     }
 
@@ -21,30 +21,30 @@ function App() {
 
   const handleFileUpload = async () => {
     if (!selectedFile) {
-      alert('Please select a PNG or JPG image file first.');
+      alert("Please select a PNG or JPG image file first.");
       return;
     }
 
     // Implement file upload logic here (consider using libraries like Axios)
     const formData = new FormData();
-    formData.append('file', selectedFile);
+    formData.append("file", selectedFile);
 
     // Replace with your actual server-side endpoint for image upload
-    const response = await fetch('/api/upload', {
-      method: 'POST',
+    const response = await fetch("/api/upload", {
+      method: "POST",
       body: formData,
     });
 
     const data = await response.json();
 
     if (data.success) {
-      console.log('Image uploaded successfully!');
+      console.log("Image uploaded successfully!");
       // Update state with the actual image URL from the server response
       setImageUrl(data.imageUrl); // Assuming the server returns the uploaded image URL
       setSelectedFile(null); // Clear selection after successful upload
     } else {
-      console.error('Error uploading image:', data.error);
-      alert('Error uploading image. Please try again.');
+      console.error("Error uploading image:", data.error);
+      alert("Error uploading image. Please try again.");
     }
   };
 
@@ -56,26 +56,26 @@ function App() {
         surname: document.getElementById("surname").value,
         id: document.getElementById("id").value,
         image: document.getElementById("image").value,
-      })
+      });
       console.log(response.data);
-    }
-    catch (error) {
+    } catch (error) {
       console.log("Error making the Chat GPT request" + error);
     }
-  }
+  };
 
   return (
     <div>
-      <header className=' h-28'>
-          <h2 className=' text-white'>PAPERFREE logo placeholder</h2>
+      <header className=" h-28">
+        <h2 className=" text-white">PAPERFREE logo placeholder</h2>
       </header>
-      <div className="image-upload-container h-full flex items-center align-middle justify-center ">
-
+      <div className="image-upload-container h-full flex items-center align-middle  ">
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
-  
           <div className="mb-5">
-            <input placeholder='Prenom' type="text" id="prenom" 
-            className="bg-custom-dark border
+            <input
+              placeholder="Prenom"
+              type="text"
+              id="prenom"
+              className="bg-custom-dark border
              border-custom-border
              text-zinc-200 text-sm rounded-lg
              focus:ring-blue-500
@@ -88,11 +88,16 @@ function App() {
              dark:focus:border-blue-500 
              placeholder:text-center hover:scale-110 ease-in-out duration-300
              
-             "required />
+             "
+              required
+            />
           </div>
           <div className="mb-5">
-            <input placeholder='Nom' type="text" id="prenom" 
-            className="bg-custom-dark border
+            <input
+              placeholder="Nom"
+              type="text"
+              id="prenom"
+              className="bg-custom-dark border
              border-custom-border
              text-zinc-200 text-sm rounded-lg
              focus:ring-blue-500
@@ -105,12 +110,17 @@ function App() {
              dark:focus:border-blue-500 
              placeholder:text-center hover:scale-110 ease-in-out duration-300
              
-             "required />
+             "
+              required
+            />
           </div>
 
           <div className="mb-5">
-            <input placeholder='Numero Carte identité' type="text" id="prenom" 
-            className="bg-custom-dark border
+            <input
+              placeholder="Numero Carte identité"
+              type="text"
+              id="prenom"
+              className="bg-custom-dark border
              border-custom-border
              text-zinc-200 text-sm rounded-lg
              focus:ring-blue-500
@@ -123,7 +133,9 @@ function App() {
              dark:focus:border-blue-500 
              placeholder:text-center hover:scale-110 ease-in-out duration-300
              
-             "required />
+             "
+              required
+            />
           </div>
 
           <div>
@@ -131,10 +143,10 @@ function App() {
               type="file"
               accept="image/png,image/jpeg"
               onChange={handleFileChange}
-              className=" h-14 
+              className="h-12
               bg-custom-dark rounded-lg 
               cursor-pointer
-              file:h-14 
+              file:h-12 
               file:mr-4 file:py-2 file:px-4
               file:border-0
               file:text-sm file:font-semibold
@@ -144,10 +156,9 @@ function App() {
               hover:scale-110 ease-in-out duration-300
               "
             />
-
           </div>
 
-{/*           <div className='mt-3 flex justify-center'>
+          {/*           <div className='mt-3 flex justify-center'>
 
             <button type="submit" 
             className="text-white bg-gradient-button
@@ -165,37 +176,36 @@ function App() {
              
              ">Submit</button>
           </div> */}
-{/* Testing diffrent button desgign */}
-            <div className='mt-3 flex justify-center'>
+          {/* Testing diffrent button desgign */}
 
-            <button type="submit" 
-            className="text-black
-            bg-white
-
-            hover: ease-in-out duration-500
+          <div className="mt-3 flex justify-center">
+            <button
+              type="submit"
+              className="
+            bg-gradient-to-r from-[#f6d365] to-[#fda085]
+            hover:ease-in-out duration-500
             hover:bg-opacity-50
-            hover:bg-custom-dark
-            hover:text-zinc-300  
+            hover:bg-gradient-to-tr from-orange-300 to-orange-600
+            hover:text-white  
             hover:ring-zinc-300 
             hover:ring-2 
             hover:outline-none
-            font-medium rounded-lg
-            text-sm w-full sm:w-auto 
+            text-white
+            font-medium rounded-3xl
+            text-sm w-full sm:w-32
             px-3 py-2.5 
             text-center
             
-            
-            
-            ">Submit</button>
-            </div>
-          
-
+            "
+            >
+              Submit
+            </button>
+          </div>
         </form>
         {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
-
       </div>
-      <footer className=' h-28'>
-        <h2 className=' text-white'>Footer placerholder text</h2>
+      <footer className=" h-28">
+        <h2 className=" text-white">Footer placerholder text</h2>
       </footer>
     </div>
   );
