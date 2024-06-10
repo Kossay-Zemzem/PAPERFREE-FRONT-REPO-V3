@@ -1,11 +1,10 @@
 
 
-    function Nav(){
+    function Logo(){
         return (
             <>
-            
-            
+            <img src={BaseAudioContext.png}></img>
             </>
         )
     }
-    export default Nav;
+    export default Logo;

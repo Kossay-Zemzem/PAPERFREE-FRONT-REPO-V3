@@ -1,9 +1,10 @@
 *8 june 2024*
 - [ ] -Figure out why the bottom footer doesn't reach the very end of the page
 - [ ] -Decide main elements of to put in header and footer
-- [ ] -Add gradient color to submit button
 - [x] -fix upload image box color to match the other cards
 - [x] -Fix cards text color from black to white
 - [ ] -Remove all "dark" attributes in tailwind syntax [Delayed , causues too many warnings for some reason]
 - [x] -Change all class attributes to className atrributes to avoid future problems (cause it works for now)
 - [ ] -Improve input file design [In progress]
+- [ ] -Add gradient color to submit button
+- [ ] -Add temporary logo (as a component maybe)

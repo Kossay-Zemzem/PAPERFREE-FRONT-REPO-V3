@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
 import axios from 'axios'
-
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
