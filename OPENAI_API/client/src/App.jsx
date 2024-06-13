@@ -66,13 +66,14 @@ function App() {
   return (
     <div>
       <header className=" h-28">
+        <p>السلام عليكم</p>
       <img className="w-20 mt-2" src="../public/images/BETA.png"/>
       </header>
       <div className="image-upload-container h-full flex items-center align-middle  ">
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
-              placeholder="Prenom"
+              placeholder="اللقب"
               type="text"
               id="prenom"
               className="bg-custom-dark border
@@ -94,7 +95,7 @@ function App() {
           </div>
           <div className="mb-5">
             <input
-              placeholder="Nom"
+              placeholder="الأسم"
               type="text"
               id="prenom"
               className="bg-custom-dark border
@@ -117,7 +118,7 @@ function App() {
 
           <div className="mb-5">
             <input
-              placeholder="Numero Carte identité"
+              placeholder="رقم بطاقة التعريف الوطنية"
               type="text"
               id="prenom"
               className="bg-custom-dark border
