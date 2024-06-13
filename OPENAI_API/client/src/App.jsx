@@ -66,7 +66,7 @@ function App() {
   return (
     <div>
       <header className=" h-28">
-        <h2 className=" text-white">PAPERFREE logo placeholder</h2>
+      <img className="w-20 mt-2" src="../public/images/BETA.png"/>
       </header>
       <div className="image-upload-container h-full flex items-center align-middle  ">
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
