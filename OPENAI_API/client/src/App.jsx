@@ -65,9 +65,10 @@ function App() {
 
   return (
     <div>
-      <header className=" h-28">
-        <p>السلام عليكم</p>
-      <img className="w-20 mt-2" src="../public/images/logoBETA.png"/>
+      <header className=" h-24">
+      <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png"/>
+      <hr className="mt-3 border-2
+      mix-blend-overlay opacity-50"/>
       </header>
       <div className="image-upload-container h-full flex items-center align-middle  ">
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
@@ -79,35 +80,28 @@ function App() {
               className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
               block w-full p-1.5
-             text-black text-xl 
+             text-black text-xl text-center
              placeholder-gray-400 placeholder:text-center 
-             text-white             
-             focus:ring-blue-500
-             focus:border-blue-500  
+             focus:ring-2             
+             focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
-             
              "
               required
             />
           </div>
           <div className="mb-5">
             <input
-              placeholder="الأسم"
+              placeholder="اللقب"
               type="text"
               id="prenom"
-              className="bg-custom-dark border
-             border-custom-border
-             text-zinc-200 text-sm rounded-lg
-             focus:ring-blue-500
-             focus:border-blue-500 block w-full p-2.5
-             dark:bg-gray-700
-             dark:border-gray-600
-             dark:placeholder-gray-400
-             dark:text-white
-             dark:focus:ring-blue-500
-             dark:focus:border-blue-500 
-             placeholder:text-center hover:scale-110 ease-in-out duration-300
-             
+              className="bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
              "
               required
             />
@@ -118,19 +112,14 @@ function App() {
               placeholder="رقم بطاقة التعريف الوطنية"
               type="text"
               id="prenom"
-              className="bg-custom-dark border
-             border-custom-border
-             text-zinc-200 text-sm rounded-lg
-             focus:ring-blue-500
-             focus:border-blue-500 block w-full p-2.5
-             dark:bg-gray-700
-             dark:border-gray-600
-             dark:placeholder-gray-400
-             dark:text-white
-             dark:focus:ring-blue-500
-             dark:focus:border-blue-500 
-             placeholder:text-center hover:scale-110 ease-in-out duration-300
-             
+              className="bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
              "
               required
             />
@@ -142,7 +131,7 @@ function App() {
               accept="image/png,image/jpeg"
               onChange={handleFileChange}
               className="h-12
-              bg-custom-dark rounded-lg 
+              bg-[#D9D9D9] rounded-lg 
               cursor-pointer
               file:h-12 
               file:mr-4 file:py-2 file:px-4
@@ -155,7 +144,57 @@ function App() {
               "
             />
           </div>
+          <div className="mt-3 flex justify-center ">
+          <div className="ml-4 mr-4">
+              <button
+                type="submit"
+                className="
+              bg-gradient-to-b from-[#CBB91B] from-50% to-[#CD970B]
+              rounded-lg
+              text-black text-lg 
+              font-medium 
+              w-full sm:w-20
+              px-3 py-2 
+              text-center
+              hover:ease-in-out duration-500
+              hover:bg-opacity-50
+              
+              hover:text-white  
+              hover:ring-zinc-300 
+              hover:ring-2 
+              hover:outline-none
 
+              "
+              >
+                التالي
+              </button>
+            </div>
+
+            <div className="ml-4 mr-4">
+              <button
+                type="submit"
+                className="
+              bg-gradient-to-tr from-[#8E150E] from-12% to-[#F23326]
+              rounded-lg
+              text-black text-lg 
+              font-medium 
+              w-full sm:w-20
+              px-3 py-2 
+              text-center
+              hover:ease-in-out duration-500
+              hover:bg-opacity-50
+              
+              hover:text-white  
+              hover:ring-zinc-300 
+              hover:ring-2 
+              hover:outline-none
+
+              "
+              >
+                إعادة
+              </button>
+            </div>
+          </div>
           {/*           <div className='mt-3 flex justify-center'>
 
             <button type="submit" 
@@ -176,7 +215,7 @@ function App() {
           </div> */}
           {/* Testing diffrent button desgign */}
 
-          <div className="mt-3 flex justify-center">
+{/*           <div className="mt-3 flex justify-center">
             <button
               type="submit"
               className="
@@ -198,13 +237,13 @@ function App() {
             >
               Submit
             </button>
-          </div>
+          </div> */}
         </form>
         {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
       </div>
-      <footer className=" h-28">
+{/*       <footer className=" h-28">
         <h2 className=" text-white">Footer placerholder text</h2>
-      </footer>
+      </footer> */}
     </div>
   );
 }
