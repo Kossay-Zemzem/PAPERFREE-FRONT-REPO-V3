@@ -73,21 +73,18 @@ function App() {
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
-              placeholder="اللقب"
+              placeholder="الأسم"
               type="text"
               id="prenom"
-              className="bg-custom-dark border
-             border-custom-border
-             text-zinc-200 text-sm rounded-lg
+              className="bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl 
+             placeholder-gray-400 placeholder:text-center 
+             text-white             
              focus:ring-blue-500
-             focus:border-blue-500 block w-full p-2.5
-             dark:bg-gray-700
-             dark:border-gray-600
-             dark:placeholder-gray-400
-             dark:text-white
-             dark:focus:ring-blue-500
-             dark:focus:border-blue-500 
-             placeholder:text-center hover:scale-110 ease-in-out duration-300
+             focus:border-blue-500  
+             hover:scale-110 ease-in-out duration-300
              
              "
               required
