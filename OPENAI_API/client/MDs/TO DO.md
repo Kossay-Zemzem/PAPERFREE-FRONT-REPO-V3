@@ -1,5 +1,4 @@
 *8 june 2024*
-[ ] Figure out how to activate prettier plugin with tailwind css
 ### Implementing Figma concept
 - [ ] Import high res picture of background (Or redo it in TailwindCSS+ animation potential)
 - [ ] Implement input cards (match styling + arabic text )
@@ -7,7 +6,6 @@
 - [ ] Learn how to make multiple page in React
 - [ ] Figure out how to change file upload text to araribic OR remove it
 - [ ] add animations and smooth things
-- [ ] Chnage main arabic font [check google fonts]
 
 ### Functional changes
 - [ ] -Figure out why the bottom footer doesn't reach the very end of the page

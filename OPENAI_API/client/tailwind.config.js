@@ -18,5 +18,5 @@ export default {
       },
     },
   },
-  plugins: ["prettier-plugin-foo"],
+  plugins: [],
 }
