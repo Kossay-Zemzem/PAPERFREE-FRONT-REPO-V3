@@ -1,9 +1,10 @@
 *8 june 2024*
 [ ] Figure out how to activate prettier plugin with tailwind css
 ### Implementing Figma concept
-- [ ] Import high res picture of background (Or redo it in TailwindCSS+ animation potential)
-- [ ] Implement input cards (match styling + arabic text )
-- [ ]  Implement buttons
+- [x] Import high res picture of background (Or redo it in TailwindCSS+ animation potential)
+- [ ]  [Optioanl] redo background in TailwindCSS+ animation potentia
+- [x] Implement input cards inital desgin (match styling + arabic text )
+- [x]  Implement buttons initial design
 - [ ] Learn how to make multiple page in React
 - [ ] Figure out how to change file upload text to araribic OR remove it
 - [ ] add animations and smooth things
