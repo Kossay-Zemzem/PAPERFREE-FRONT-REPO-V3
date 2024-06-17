@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-
-function Home() {
+import {Link} from "react-router-dom"
+function home() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
@@ -71,6 +71,7 @@ function Home() {
       mix-blend-overlay opacity-50"/>
       </header>
       <div className="image-upload-container h-full flex items-center align-middle  ">
+        
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
@@ -240,6 +241,7 @@ function Home() {
           </div> */}
         </form>
         {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
+        <Link to="Page1" className="text-white">NEXT</Link> 
       </div>
 {/*       <footer className=" h-28">
         <h2 className=" text-white">Footer placerholder text</h2>
@@ -248,4 +250,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default home;
