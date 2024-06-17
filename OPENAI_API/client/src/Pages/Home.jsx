@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 function home() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
@@ -66,12 +66,13 @@ function home() {
   return (
     <div>
       <header className=" h-24">
-      <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png"/>
-      <hr className="mt-3 border-2
-      mix-blend-overlay opacity-50"/>
+        <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png" />
+        <hr
+          className="mt-3 border-2
+      mix-blend-overlay opacity-50"
+        />
       </header>
       <div className="image-upload-container h-full flex items-center align-middle  ">
-        
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
@@ -146,7 +147,31 @@ function home() {
             />
           </div>
           <div className="mt-3 flex justify-center ">
-          <div className="ml-4 mr-4">
+            <div className="ml-4 mr-4">
+              <button
+                type="reset"
+                className="
+              bg-gradient-to-tr from-[#8E150E] from-12% to-[#F23326]
+              rounded-lg
+              text-black text-lg 
+              font-medium 
+              w-full sm:w-20
+              px-3 py-2 
+              text-center
+              hover:ease-in-out duration-500
+              hover:bg-opacity-50
+              
+              hover:text-white  
+              hover:ring-zinc-300 
+              hover:ring-2 
+              hover:outline-none
+
+              "
+              >
+                إعادة
+              </button>
+            </div>
+            <div className="ml-4 mr-4">
               <button
                 type="submit"
                 className="
@@ -167,32 +192,7 @@ function home() {
 
               "
               >
-                التالي
-              </button>
-            </div>
-
-            <div className="ml-4 mr-4">
-              <button
-                type="submit"
-                className="
-              bg-gradient-to-tr from-[#8E150E] from-12% to-[#F23326]
-              rounded-lg
-              text-black text-lg 
-              font-medium 
-              w-full sm:w-20
-              px-3 py-2 
-              text-center
-              hover:ease-in-out duration-500
-              hover:bg-opacity-50
-              
-              hover:text-white  
-              hover:ring-zinc-300 
-              hover:ring-2 
-              hover:outline-none
-
-              "
-              >
-                إعادة
+                <Link to="Page1">التالي</Link>
               </button>
             </div>
           </div>
@@ -216,7 +216,7 @@ function home() {
           </div> */}
           {/* Testing diffrent button desgign */}
 
-{/*           <div className="mt-3 flex justify-center">
+          {/*           <div className="mt-3 flex justify-center">
             <button
               type="submit"
               className="
@@ -241,13 +241,12 @@ function home() {
           </div> */}
         </form>
         {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
-        <Link to="Page1" className="text-white">NEXT</Link> 
       </div>
-{/*       <footer className=" h-28">
+      {/*       <footer className=" h-28">
         <h2 className=" text-white">Footer placerholder text</h2>
       </footer> */}
     </div>
-  )
+  );
 }
 
 export default home;
