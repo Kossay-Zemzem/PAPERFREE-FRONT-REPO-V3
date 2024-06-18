@@ -192,7 +192,7 @@ function home() {
 
               "
               >
-                <Link to="Page1">التالي</Link>
+                <Link to="/Page1">التالي</Link>
               </button>
             </div>
           </div>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-function Page1() {
+
+function Page2() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
@@ -75,7 +76,7 @@ function Page1() {
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
-              placeholder="عنوان"
+              placeholder="كذا وكذا"
               type="text"
               id="prenom"
               className="bg-[#D9D9D9]
@@ -92,7 +93,7 @@ function Page1() {
           </div>
           <div className="mb-5">
             <input
-              placeholder="رقد البريد"
+              placeholder="رقم تسجيل"
               type="text"
               id="prenom"
               className="bg-[#D9D9D9]
@@ -191,7 +192,7 @@ function Page1() {
   
                 "
               >
-                <Link to="/page2">التالي</Link>
+                <Link to="">التالي</Link>
               </button>
             </div>
           </div>
@@ -204,4 +205,4 @@ function Page1() {
     </div>
   );
 }
-export default Page1;
+export default Page2;
