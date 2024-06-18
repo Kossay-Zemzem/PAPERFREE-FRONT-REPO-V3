@@ -2,8 +2,7 @@
 [ ] Figure out how to activate prettier plugin with tailwind css
 ### Implementing Figma concept
 - [ ] Implement login/sign up page before
-- [ ]  [Optional] redo background in TailwindCSS+ animation potential
-- [ ] Figure out how to change file upload text to araribic OR remove it
+- [ ]  [Optional] redo background in Tailwind CSS+ animation potential
 - [ ] add animations and smooth things
 - [ ] Chnage main arabic font [check google fonts]
 - [x] Implement input cards inital desgin (match styling + arabic text )
@@ -16,6 +15,7 @@
 ### Visual changes
 - [ ] Add icons to sign up page (and other places if possible) [In progress]
 - [ ] -Improve input file design [In progress]
+- [ ]  Figure out how to change file upload text to araribic OR remove it
 - [x] Figure out gradient color to submit button
 
 ### Other changes

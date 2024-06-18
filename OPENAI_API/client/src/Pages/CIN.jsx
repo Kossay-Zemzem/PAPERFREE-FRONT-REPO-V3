@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
-function Page2() {
+function CIN() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
 
@@ -63,48 +62,49 @@ function Page2() {
       console.log("Error making the Chat GPT request" + error);
     }
   };
+
   return (
     <div>
       <header className=" h-24">
         <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png" />
         <hr
           className="mt-3 border-2
-        mix-blend-overlay opacity-50"
+      mix-blend-overlay opacity-50"
         />
       </header>
       <div className="image-upload-container h-full flex items-center align-middle  ">
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
-              placeholder="كذا وكذا"
+              placeholder="الأسم"
               type="text"
               id="prenom"
               className="bg-[#D9D9D9]
-                border border-red-600 rounded-lg
-                block w-full p-1.5
-               text-black text-xl text-center
-               placeholder-gray-400 placeholder:text-center 
-               focus:ring-2             
-               focus:ring-[#057933]
-               hover:scale-110 ease-in-out duration-300
-               "
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
+             "
               required
             />
           </div>
           <div className="mb-5">
             <input
-              placeholder="رقم تسجيل"
+              placeholder="اللقب"
               type="text"
               id="prenom"
               className="bg-[#D9D9D9]
-                border border-red-600 rounded-lg
-                block w-full p-1.5
-               text-black text-xl text-center
-               placeholder-gray-400 placeholder:text-center 
-               focus:ring-2             
-               focus:ring-[#057933]
-               hover:scale-110 ease-in-out duration-300
-               "
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
+             "
               required
             />
           </div>
@@ -115,14 +115,14 @@ function Page2() {
               type="text"
               id="prenom"
               className="bg-[#D9D9D9]
-                border border-red-600 rounded-lg
-                block w-full p-1.5
-               text-black text-xl text-center
-               placeholder-gray-400 placeholder:text-center 
-               focus:ring-2             
-               focus:ring-[#057933]
-               hover:scale-110 ease-in-out duration-300
-               "
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
+             "
               required
             />
           </div>
@@ -133,17 +133,17 @@ function Page2() {
               accept="image/png,image/jpeg"
               onChange={handleFileChange}
               className="h-12
-                bg-[#D9D9D9] rounded-lg 
-                cursor-pointer
-                file:h-12 
-                file:mr-4 file:py-2 file:px-4
-                file:border-0
-                file:text-sm file:font-semibold
-                file:bg-gradient-to-r from-yellow-500 to-orange-500
-                hover:bg-gray-500 ease-in-out duration-500
-                file:text-white
-                hover:scale-110 ease-in-out duration-300
-                "
+              bg-[#D9D9D9] rounded-lg 
+              cursor-pointer
+              file:h-12 
+              file:mr-4 file:py-2 file:px-4
+              file:border-0
+              file:text-sm file:font-semibold
+              file:bg-gradient-to-r from-yellow-500 to-orange-500
+              hover:bg-gray-500 ease-in-out duration-500
+              file:text-white
+              hover:scale-110 ease-in-out duration-300
+              "
             />
           </div>
           <div className="mt-3 flex justify-center ">
@@ -151,48 +151,48 @@ function Page2() {
               <button
                 type="reset"
                 className="
-                bg-gradient-to-tr from-[#8E150E] from-12% to-[#F23326]
-                rounded-lg
-                text-black text-lg 
-                font-medium 
-                w-full sm:w-20
-                px-3 py-2 
-                text-center
-                hover:ease-in-out duration-500
-                hover:bg-opacity-50
-                
-                hover:text-white  
-                hover:ring-zinc-300 
-                hover:ring-2 
-                hover:outline-none
-  
-                "
+              bg-gradient-to-tr from-[#8E150E] from-12% to-[#F23326]
+              rounded-lg
+              text-black text-lg 
+              font-medium 
+              w-full sm:w-20
+              px-3 py-2 
+              text-center
+              hover:ease-in-out duration-500
+              hover:bg-opacity-50
+              
+              hover:text-white  
+              hover:ring-zinc-300 
+              hover:ring-2 
+              hover:outline-none
+
+              "
               >
-                <Link to="/">عودة</Link>
+                إعادة
               </button>
             </div>
             <div className="ml-4 mr-4">
               <button
                 type="submit"
                 className="
-                bg-gradient-to-b from-[#CBB91B] from-50% to-[#CD970B]
-                rounded-lg
-                text-black text-lg 
-                font-medium 
-                w-full sm:w-20
-                px-3 py-2 
-                text-center
-                hover:ease-in-out duration-500
-                hover:bg-opacity-50
-                
-                hover:text-white  
-                hover:ring-zinc-300 
-                hover:ring-2 
-                hover:outline-none
-  
-                "
+              bg-gradient-to-b from-[#CBB91B] from-50% to-[#CD970B]
+              rounded-lg
+              text-black text-lg 
+              font-medium 
+              w-full sm:w-20
+              px-3 py-2 
+              text-center
+              hover:ease-in-out duration-500
+              hover:bg-opacity-50
+              
+              hover:text-white  
+              hover:ring-zinc-300 
+              hover:ring-2 
+              hover:outline-none
+
+              "
               >
-                <Link to="">التالي</Link>
+                <Link to="/CertResid">التالي</Link>
               </button>
             </div>
           </div>
@@ -200,9 +200,10 @@ function Page2() {
         {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
       </div>
       {/*       <footer className=" h-28">
-          <h2 className=" text-white">Footer placerholder text</h2>
-        </footer> */}
+        <h2 className=" text-white">Footer placerholder text</h2>
+      </footer> */}
     </div>
   );
 }
-export default Page2;
+
+export default CIN;

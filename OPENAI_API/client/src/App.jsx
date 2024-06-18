@@ -1,16 +1,18 @@
 import './App.css' 
-import {HashRouter as Router,Routes,Route} from 'react-router-dom'
-import Home from './Pages/home.jsx'
-import Page1 from './Pages/Page1.jsx'
-import Page2 from "./Pages/Page2.jsx";
+import { Routes, Route } from "react-router-dom";
+
+import CIN from "./Pages/CIN.jsx";
+import CertResid from "./Pages/CertResid.jsx";
+import Pass from "./Pages/Pass.jsx";
+import Home from "./Pages/Home.jsx";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Page1" element={<Page1 />} />
-      {/* <Route path="page1/Page2" element={<Page2 />} /> */}
-      <Route path="/page2" element={<Page2 />} />
+      <Route path="/CIN" element={<CIN />} />
+      <Route path="/CertResid" element={<CertResid />} />
+      <Route path="/Pass" element={<Pass />} />
     </Routes>
   );
 }
