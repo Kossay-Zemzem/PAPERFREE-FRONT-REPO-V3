@@ -19,8 +19,11 @@ function Home() {
         "
         >
           <div
-            className="text-center text-white
-            mb-5
+            className="text-center
+            font-lalezar
+            text-white
+            text-lg
+            mb-5 mt-1
           
           "
           >
@@ -43,7 +46,36 @@ function Home() {
               required
             />
           </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="
+                bg-gradient-to-b from-[#CBB91B] from-50% to-[#CD970B]
+                rounded-lg
+                text-black text-lg 
+                font-medium 
+                w-full sm:w-20
+                px-3 py-2 
+                text-center
+                hover:ease-in-out duration-500
+                hover:bg-opacity-50
+                
+                hover:text-white  
+                hover:ring-zinc-300 
+                hover:ring-2 
+                hover:outline-none
+  
+                "
+            >
+              <Link to="">إنشاء</Link>
+            </button>
+          </div>
         </div>
+        <div
+          className="bg-black w-1 h-25 opacity-15
+        
+        "
+        ></div>
         <div
           className="bg-black bg-opacity-35
         ml-4 mr-4 pr-8 pl-8 pt-3 pb-3

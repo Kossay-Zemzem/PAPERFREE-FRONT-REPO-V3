@@ -1,5 +1,6 @@
 *8 june 2024*
 [ ] Figure out how to activate prettier plugin with tailwind css
+[ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### Implementing Figma concept
 - [ ] Implement login/sign up page before
 - [ ]  [Optional] redo background in Tailwind CSS+ animation potential
@@ -11,6 +12,7 @@
 - [x] Import high res picture of background (Or redo it in TailwindCSS+ animation potential)
 ### Functional changes
 - [ ] -Figure out why the bottom footer doesn't reach the very end of the page
+- [ ] Figure out why the custom cursor doesn't work in the entire page (only top half works)
 - [x] -Remove all "dark" attributes in tailwind syntax [Delayed , causues too many warnings for some reason]
 ### Visual changes
 - [ ] Add icons to sign up page (and other places if possible) [In progress]
