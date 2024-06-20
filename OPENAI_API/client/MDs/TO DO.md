@@ -2,10 +2,16 @@
 [ ] Figure out how to activate prettier plugin with tailwind css
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### Implementing Figma concept
-- [ ] Implement login/sign up page before
-- [ ]  [Optional] redo background in Tailwind CSS+ animation potential
-- [ ] add animations and smooth things
-- [ ] Chnage main arabic font [check google fonts]
+- [ ] Implement login/sign up page before 
+	- [ ] Base elements
+	- [ ] Vertically center the divs
+	- [ ] space them out horizontally
+	- [ ] correct the middle line (white-ish)
+	- [ ] 
+- [ ]  [Optional] redo background in Tailwind CSS
+- [ ] [Optional] Test backgournd animation CSS
+
+- [x] Chnage main arabic font [check google fonts]
 - [x] Implement input cards inital desgin (match styling + arabic text )
 - [x]  Implement buttons initial design
 - [x] Learn how to make multiple page in React
@@ -15,6 +21,8 @@
 - [ ] Figure out why the custom cursor doesn't work in the entire page (only top half works)
 - [x] -Remove all "dark" attributes in tailwind syntax [Delayed , causues too many warnings for some reason]
 ### Visual changes
+- [ ] add animations and smooth things to elements
+	- [ ] Improve button hover and click animations 
 - [ ] Add icons to sign up page (and other places if possible) [In progress]
 - [ ] -Improve input file design [In progress]
 - [ ]  Figure out how to change file upload text to araribic OR remove it
