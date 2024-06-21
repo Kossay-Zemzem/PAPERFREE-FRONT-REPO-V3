@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Home() {
+  /* h-[calc(100vh-103px)] */
   return (
     <div>
       <header className="flex justify-center">
         <img
-          className="w-80 mt-6 mr-4 mb-6"
+          className="w-96 mt-6 mr-4 mb-6"
           src="../public/images/logoBETA.png"
         />
         {/*         <hr
@@ -19,11 +20,10 @@ function Home() {
         className="flex 
       items-center
       justify-center
-      h-[calc(100vh-103px)]
-      
+      h-[calc(100vh-131px)]
       "
       >
-        <div className="flex gap-x-20 mb-16">
+        <div className="flex gap-x-20 mb-24">
           <div
             className="bg-black bg-opacity-35 rounded-lg
          pr-8 pl-8 pt-3 pb-3
@@ -50,7 +50,7 @@ function Home() {
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block w-full p-1.5
+              block p-1.5
              text-black text-xl text-center
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             

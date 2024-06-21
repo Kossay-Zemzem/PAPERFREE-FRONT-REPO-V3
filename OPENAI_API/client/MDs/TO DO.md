@@ -1,15 +1,18 @@
 *8 june 2024*
 [ ] Figure out how to activate prettier plugin with tailwind css
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
+### To add 
+- [ ] Concept of last page (the analysis page)+implement
 ### Implementing Figma concept
 - [ ] Implement login/sign up page before 
 	- [x] Base elements
-	- [ ] Vertically center the divs
-	- [ ] space them out horizontally
-	- [ ] correct the middle line (white-ish)
-	- [ ] 
-- [ ]  [Optional] redo background in Tailwind CSS
+	- [x] Vertically center the divs
+	- [x] space them out horizontally
+	- [x] correct the middle line (white-ish)
+	- [ ] increase size of boxes
+- [x]  [Optional] redo background in Tailwind CSS
 - [ ] [Optional] Test backgournd animation CSS
+- [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....)
 
 - [x] Chnage main arabic font [check google fonts]
 - [x] Implement input cards inital desgin (match styling + arabic text )

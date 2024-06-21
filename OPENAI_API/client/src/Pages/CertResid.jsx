@@ -150,7 +150,7 @@ function CertResid() {
               <button
                 type="reset"
                 className="
-                bg-gradient-to-tr from-[#8E150E] from-12% to-[#F23326]
+                bg-gradient-to-t from-[#ac1e01] from-21% to-[#F23326]
                 rounded-lg
                 text-black text-lg 
                 font-medium 
@@ -174,7 +174,7 @@ function CertResid() {
               <button
                 type="submit"
                 className="
-                bg-gradient-to-b from-[#CBB91B] from-50% to-[#CD970B]
+                bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
                 rounded-lg
                 text-black text-lg 
                 font-medium 
