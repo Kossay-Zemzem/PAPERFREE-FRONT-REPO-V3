@@ -3,7 +3,7 @@
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### Implementing Figma concept
 - [ ] Implement login/sign up page before 
-	- [ ] Base elements
+	- [x] Base elements
 	- [ ] Vertically center the divs
 	- [ ] space them out horizontally
 	- [ ] correct the middle line (white-ish)

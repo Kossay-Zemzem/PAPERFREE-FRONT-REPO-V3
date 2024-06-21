@@ -15,10 +15,18 @@ function Home() {
         /> */}
       </header>
 
-      <div className="h-full flex align-middle justify-center">
+      <div
+        className="flex 
+      items-center
+      justify-center
+      gap-x-20 
+      h-[calc(100vh-103px)]
+      
+      "
+      >
         <div
           className="bg-black bg-opacity-35 rounded-lg
-        ml-4 mr-4 pr-8 pl-8 pt-3 pb-3
+         pr-8 pl-8 pt-3 pb-3
         "
         >
           <div
@@ -112,7 +120,7 @@ function Home() {
           </div>
         </div>
         <div
-          className="bg-black w-1 h-25 opacity-15
+          className="bg-[#C3BDBD] w-1 h-64 mix-blend-soft-light opacity-65
         
         "
         ></div>
