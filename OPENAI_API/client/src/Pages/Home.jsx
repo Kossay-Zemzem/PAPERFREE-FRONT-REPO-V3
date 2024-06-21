@@ -19,18 +19,18 @@ function Home() {
         className="flex 
       items-center
       justify-center
-      gap-x-20 
       h-[calc(100vh-103px)]
       
       "
       >
-        <div
-          className="bg-black bg-opacity-35 rounded-lg
+        <div className="flex gap-x-20 mb-16">
+          <div
+            className="bg-black bg-opacity-35 rounded-lg
          pr-8 pl-8 pt-3 pb-3
         "
-        >
-          <div
-            className=" 
+          >
+            <div
+              className=" 
             font-lalezar
             text-center
             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
@@ -40,15 +40,15 @@ function Home() {
             mb-5 mt-1
           
           "
-          >
-            إنشاء حساب جديد
-          </div>
-          <div className="mb-5">
-            <input
-              placeholder="البريد الإلكتروني"
-              type="text"
-              id="prenom"
-              className="bg-[#D9D9D9]
+            >
+              إنشاء حساب جديد
+            </div>
+            <div className="mb-5">
+              <input
+                placeholder="البريد الإلكتروني"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
               block w-full p-1.5
              text-black text-xl text-center
@@ -57,15 +57,15 @@ function Home() {
              focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
              "
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <input
-              placeholder="ادخل كلمة السر"
-              type="text"
-              id="prenom"
-              className="bg-[#D9D9D9]
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <input
+                placeholder="ادخل كلمة السر"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
               block w-full p-1.5
              text-black text-xl text-center
@@ -74,15 +74,15 @@ function Home() {
              focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
              "
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <input
-              placeholder="ادخل كلمة السر مجداد"
-              type="text"
-              id="prenom"
-              className="bg-[#D9D9D9]
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <input
+                placeholder="ادخل كلمة السر مجداد"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
               block w-full p-1.5
              text-black text-xl text-center
@@ -91,13 +91,13 @@ function Home() {
              focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
              "
-              required
-            />
-          </div>
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="
+                required
+              />
+            </div>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="
                 bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
                 rounded-lg
                 text-black text-lg 
@@ -114,24 +114,24 @@ function Home() {
                 hover:outline-none
   
                 "
-            >
-              <Link to="CIN">إنشاء</Link>
-            </button>
+              >
+                <Link to="CIN">إنشاء</Link>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          className="bg-[#C3BDBD] w-1 h-64 mix-blend-soft-light opacity-65
+          <div
+            className="bg-[#C3BDBD] w-1 h-64 mix-blend-soft-light opacity-65
         
         "
-        ></div>
-        <div
-          className="
+          ></div>
+          <div
+            className="
           bg-black bg-opacity-35 rounded-lg
         ml-4 mr-4 pr-8 pl-8 pt-3 pb-3 h-64
         "
-        >
-          <div
-            className="
+          >
+            <div
+              className="
             font-lalezar
             text-center
             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
@@ -141,15 +141,15 @@ function Home() {
             mb-5 mt-1
           
           "
-          >
-            تسجيل الدخول
-          </div>
-          <div className="mb-5">
-            <input
-              placeholder="البريد الإلكتروني"
-              type="text"
-              id="prenom"
-              className="bg-[#D9D9D9]
+            >
+              تسجيل الدخول
+            </div>
+            <div className="mb-5">
+              <input
+                placeholder="البريد الإلكتروني"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
               block w-full p-1.5
              text-black text-xl text-center
@@ -158,15 +158,15 @@ function Home() {
              focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
              "
-              required
-            />
-          </div>
-          <div className="mb-5">
-            <input
-              placeholder="ادخل كلمة السر"
-              type="text"
-              id="prenom"
-              className="bg-[#D9D9D9]
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <input
+                placeholder="ادخل كلمة السر"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
               block w-full p-1.5
              text-black text-xl text-center
@@ -175,13 +175,13 @@ function Home() {
              focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
              "
-              required
-            />
-          </div>
-          <div className="flex justify-center">
-            <button
-              type="submit"
-              className="
+                required
+              />
+            </div>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="
                 bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
                 rounded-lg
                 text-black text-lg 
@@ -198,12 +198,12 @@ function Home() {
                 hover:outline-none
   
                 "
-            >
-              <Link to="CIN">دخول</Link>
-            </button>
-          </div>
-          <div
-            className=" 
+              >
+                <Link to="CIN">دخول</Link>
+              </button>
+            </div>
+            <div
+              className=" 
             text-center
             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
             text-transparent
@@ -213,8 +213,9 @@ function Home() {
             mb-5 mt-8
             hover:scale-95 ease-linear duration-300
           "
-          >
-            <Link to="">لا يمكنك الولوج لحسابك ؟ </Link>
+            >
+              <Link to="">لا يمكنك الولوج لحسابك ؟ </Link>
+            </div>
           </div>
         </div>
       </div>
