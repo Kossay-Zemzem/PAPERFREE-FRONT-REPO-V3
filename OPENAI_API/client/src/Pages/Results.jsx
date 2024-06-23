@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import DocumentResult from "../../components/DocumentResult";
 
 function Results() {
   const [progressCIN, setProgressCIN] = useState(10); // Set the initial progress value for CIN
@@ -15,7 +16,7 @@ function Results() {
         />
       </header>
       <div className="flex justify-around">
-        <div className="flex flex-col items-center w-80">
+        {/*         <div className="flex flex-col items-center w-80">
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
           </div>
@@ -57,7 +58,10 @@ function Results() {
           >
             <Link to="/">التفاصيل</Link>
           </button>
-        </div>
+        </div> */}
+        <DocumentResult />
+        <DocumentResult />
+        <DocumentResult />
       </div>
     </div>
   );
