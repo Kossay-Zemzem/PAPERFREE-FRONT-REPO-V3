@@ -192,7 +192,7 @@ function Pass() {
   
                 "
               >
-                <Link to="">التالي</Link>
+                <Link to="/Results">التالي</Link>
               </button>
             </div>
           </div>

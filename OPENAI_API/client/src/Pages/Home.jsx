@@ -10,10 +10,6 @@ function Home() {
           className="w-96 mt-6 mr-4 mb-6"
           src="../public/images/logoBETA.png"
         />
-        {/*         <hr
-          className="mt-3 border-2
-        mix-blend-overlay opacity-50"
-        /> */}
       </header>
 
       <div

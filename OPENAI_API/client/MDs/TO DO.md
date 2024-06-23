@@ -4,15 +4,18 @@
 ### To add 
 - [ ] Concept of last page (the analysis page)+implement
 ### Implementing Figma concept
-- [ ] Implement login/sign up page before 
+- [ ] Implement **login/sign** up page before 
 	- [x] Base elements
 	- [x] Vertically center the divs
 	- [x] space them out horizontally
 	- [x] correct the middle line (white-ish)
 	- [ ] increase size of boxes
-- [x]  [Optional] redo background in Tailwind CSS
-- [ ] [Optional] Test backgournd animation CSS
+- [ ] Implement **Results** page before 
+	- [ ] Progress bar animation (entering) later
+	- [ ] 
+- [ ] [Optional] Test backgournd animation CSS [[so far so many issues]]
 - [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....)
+- [x]  [Optional] redo background in Tailwind CSS
 
 - [x] Chnage main arabic font [check google fonts]
 - [x] Implement input cards inital desgin (match styling + arabic text )
