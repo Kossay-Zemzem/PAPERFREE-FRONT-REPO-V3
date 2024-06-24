@@ -9,7 +9,9 @@ function Results() {
   return (
     <div>
       <header className=" h-24">
-        <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png" />
+        <Link to="CIN">
+          <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png" />
+        </Link>
         <hr
           className="mt-3 border-2
         mix-blend-overlay opacity-50"
@@ -48,8 +50,9 @@ function Results() {
                 pl-2
                 pr-9 
                 py-2
-                my-2  
-              
+                mt-2
+                mb-2  
+                
                 "
             >
               <Link to="/">التفاصيل</Link>
