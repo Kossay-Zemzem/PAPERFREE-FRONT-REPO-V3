@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 
 function Results() {
   const [progressCIN, setProgressCIN] = useState(10); // Set the initial progress value for CIN
@@ -34,29 +35,26 @@ function Results() {
           >
             تواقف بنسبة {progressCIN} %
           </div>
-          <button
-            type="submit"
-            className="
+          <div className="relative flex items-center">
+            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2" />
+            <button
+              type="submit"
+              className="
                 bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
                 rounded-lg
                 text-black text-lg 
-                font-medium 
-                sm:w-20
-                px-3 py-2
-                my-2 
                 text-center
-                hover:ease-in-out duration-500
-                hover:bg-opacity-50
-                
-                hover:text-white  
-                hover:ring-zinc-300 
-                hover:ring-2 
-                hover:outline-none
-  
+                font-semibold
+                pl-2
+                pr-9 
+                py-2
+                my-2  
+              
                 "
-          >
-            <Link to="/">التفاصيل</Link>
-          </button>
+            >
+              <Link to="/">التفاصيل</Link>
+            </button>
+          </div>
         </div>
       </div>
     </div>
