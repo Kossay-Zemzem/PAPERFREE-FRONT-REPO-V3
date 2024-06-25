@@ -4,6 +4,7 @@ import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
+
 import IconResult from "../../components/IconResult";
 
 function Results() {
