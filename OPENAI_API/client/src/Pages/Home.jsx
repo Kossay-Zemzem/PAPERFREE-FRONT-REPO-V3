@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { XCircleIcon } from "@heroicons/react/24/solid";
 function Home() {
   /* h-[calc(100vh-103px)] */
   return (
@@ -56,19 +56,23 @@ function Home() {
                 required
               />
             </div>
-            <div className="mb-5">
+            <div
+              className="relative mb-5 text-gray-400 focus-within:text-red-600
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <XCircleIcon className="w-6 h-6 mt-2 mr-2.5 absolute " />
               <input
                 placeholder="ادخل كلمة السر"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block w-full p-1.5
-             text-black text-xl text-center
+              block pt-1.5 pb-1.5 pr-10
+             text-black text-xl
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
              focus:ring-[#057933]
-             hover:scale-110 ease-in-out duration-300
+
              "
                 required
               />
@@ -80,7 +84,7 @@ function Home() {
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block w-full p-1.5
+              block p-1.5
              text-black text-xl text-center
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             

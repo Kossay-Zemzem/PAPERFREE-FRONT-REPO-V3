@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { XCircleIcon } from "@heroicons/react/24/solid";
+
+import IconResult from "../../components/IconResult";
 
 function Results() {
-  const [progressCIN, setProgressCIN] = useState(88.5); // Set the initial progress value for CIN
+  const [progressCIN, setProgressCIN] = useState(100); // Set the initial progress value for CIN
   const [progressPass, setProgressPass] = useState(50); // Set the initial progress value for Passeport
   const [progressCert, setProgressCert] = useState(20); // Set the initial progress value for Certificat de residance
 
@@ -24,9 +27,13 @@ function Results() {
   return (
     <div>
       <header className=" h-24">
-        <Link to="CIN">
+        <Link>
           <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png" />
         </Link>
+        <div className="inline-block text-white first-line:">
+          <Link to="/">خروج</Link>
+          <ChatBubbleLeftEllipsisIcon className="inline-block w-6 h-6 text-black ml-3s mr-2" />
+        </div>
         <hr
           className="mt-3 border-2
         mix-blend-overlay opacity-50"
@@ -73,10 +80,8 @@ function Results() {
               <Link to="/">التفاصيل</Link>
             </button>
           </div>
-          <div>
-            نجاح
-            <CheckCircleIcon className="inline-block mr-2 w-11 h-11 text-green-600" />
-          </div>
+          <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " />
+          {/* <IconResult progress={progressCIN} /> */}
         </div>
       </div>
     </div>

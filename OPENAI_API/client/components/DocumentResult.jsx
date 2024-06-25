@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchIcon from "../icons/SearchIcon";
 
 function DocumentResult() {
   const [progress, setProgress] = useState(15);
@@ -8,7 +7,6 @@ function DocumentResult() {
   // Set the initial progress value
   return (
     <div className="flex flex-col items-center w-80">
-      <SearchIcon />
       <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
         X animation placeholder
       </div>
