@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
-
+import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import IconResult from "../../components/IconResult";
 
 function Results() {
@@ -27,12 +27,25 @@ function Results() {
   return (
     <div>
       <header className=" h-24">
-        <Link>
-          <img className="w-60 mt-6 mr-4" src="../public/images/logoBETA.png" />
-        </Link>
-        <div className="inline-block text-white first-line:">
-          <Link to="/">خروج</Link>
-          <ChatBubbleLeftEllipsisIcon className="inline-block w-6 h-6 text-black ml-3s mr-2" />
+        <div className="flex justify-between">
+          <Link>
+            <img
+              className="w-60 mt-6 mr-4"
+              src="../public/images/logoBETA.png"
+            />
+          </Link>
+          <Link to="/">
+            <div
+              className="text-white border
+            p-1 ml-6 mt-5
+            hover:bg-red-600 ease-in-out duration-500
+            hover:scale-105
+            "
+            >
+              خروج
+              <ArrowLeftStartOnRectangleIcon className="inline-block w-6 h-6 text-white ml-3s mr-2" />
+            </div>
+          </Link>
         </div>
         <hr
           className="mt-3 border-2
