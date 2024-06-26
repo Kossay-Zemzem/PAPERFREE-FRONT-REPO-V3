@@ -1,27 +1,34 @@
 *8 june 2024*
+[ ] Figure out how to activate prettier plugin with tailwind css
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
-### Known issues
-- [ ] Icon inside inputs offsets padding  [Last effort solution-> put the icon outside the input] 
-- [ ] Logout button gradient doen't work with animations (and smooting them)
-### High priority
-- [ ] Fix file input 
-- [ ] Figure out how to conditionally render success/failure icon (Bro code  conditional rendering)
-- [ ] 
-###  Medium priority
-
-### Low priority
+### To add 
+- [x] Concept of last page (the analysis page)+implement
 ### Implementing Figma concept
-- [x] Add logout icon/text to all pages
+- [ ] Add logout icon/text to all pages
 - [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....)
 - [ ] Implement **login/sign** up page before 
+	- [x] Base elements
+	- [x] Vertically center the divs
+	- [x] space them out horizontally
+	- [x] correct the middle line (white-ish)
 	- [ ] increase size of boxes
 - [ ] Implement **Results** page
 	- [ ] Progress bar animation (entering) later
+	- [x] Progress bar variable colorin 
 	- [ ]  Success/failure variable icon and text loading
 - [ ] [Optional] Test backgournd animation CSS [[so far so many issues]]
+
+- [x]  [Optional] redo background in Tailwind CSS
+
+- [x] Chnage main arabic font [check google fonts]
+- [x] Implement input cards inital desgin (match styling + arabic text )
+- [x]  Implement buttons initial design
+- [x] Learn how to make multiple page in React
+- [x] Import high res picture of background (Or redo it in TailwindCSS+ animation potential)
 ### Functional changes
 - [ ] -Figure out why the bottom footer doesn't reach the very end of the page
 - [ ] Figure out why the custom cursor doesn't work in the entire page (only top half works)
+- [x] -Remove all "dark" attributes in tailwind syntax [Delayed , causues too many warnings for some reason]
 ### Visual changes
 
 - [ ] Add icons to sign up page (and other places if possible) [In progress]
@@ -29,6 +36,7 @@
 - [ ]  Figure out how to change file upload text to araribic OR remove it
 - [ ] -add animations and smooth things to elements
 	- [ ] Improve button hover and click animations 
+- [x] Figure out gradient color to submit button
 
 ### Other changes
 

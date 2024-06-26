@@ -13,7 +13,7 @@ function Home() {
       </header>
 
       <div
-        className="flex 
+        className="flex
       items-center
       justify-center
       h-[calc(100vh-131px)]
@@ -57,10 +57,11 @@ function Home() {
               />
             </div>
             <div
-              className="relative mb-5 text-gray-400 focus-within:text-red-600
+              className="
+              relative mb-5 text-gray-400 focus-within:text-red-600
                          hover:scale-110 ease-in-out duration-300"
             >
-              <XCircleIcon className="w-6 h-6 mt-2 mr-2.5 absolute " />
+              <XCircleIcon className="w-9 h-6 mt-2 mr-2.5 absolute " />
               <input
                 placeholder="ادخل كلمة السر"
                 type="text"
