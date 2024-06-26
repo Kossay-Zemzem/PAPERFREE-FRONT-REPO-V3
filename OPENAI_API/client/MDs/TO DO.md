@@ -5,7 +5,7 @@
 - [ ] Logout button gradient doen't work with animations (and smooting them)
 ### High priority
 - [ ] Fix file input 
-- [ ] Figure out how to conditionally render success/failure icon (Bro code  conditional rendering)
+- [x] Figure out how to conditionally render success/failure icon (Bro code  conditional rendering)
 - [ ] 
 ###  Medium priority
 

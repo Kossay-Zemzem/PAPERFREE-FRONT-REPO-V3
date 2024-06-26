@@ -5,10 +5,10 @@ import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 
-import IconResult from "../../components/IconResult";
+import IconResult from "./IconResult";
 
 function Results() {
-  const [progressCIN, setProgressCIN] = useState(100); // Set the initial progress value for CIN
+  const [progressCIN, setProgressCIN] = useState(82); // Set the initial progress value for CIN
   const [progressPass, setProgressPass] = useState(50); // Set the initial progress value for Passeport
   const [progressCert, setProgressCert] = useState(20); // Set the initial progress value for Certificat de residance
 
@@ -94,8 +94,8 @@ function Results() {
               <Link to="/">التفاصيل</Link>
             </button>
           </div>
-          <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " />
-          {/* <IconResult progress={progressCIN} /> */}
+          {/* <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " /> */}
+          <IconResult progress={progressCIN} />
         </div>
       </div>
     </div>
