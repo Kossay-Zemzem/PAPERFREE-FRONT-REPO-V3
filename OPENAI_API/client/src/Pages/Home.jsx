@@ -41,7 +41,7 @@ function Home() {
             </div>
             <div className="mb-5">
               <input
-                placeholder="البريد الإلكتروني"
+                placeholder="الأسم"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
@@ -63,7 +63,7 @@ function Home() {
             >
               <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute " />
               <input
-                placeholder="ادخل كلمة السر"
+                placeholder="اللقب"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
@@ -75,6 +75,23 @@ function Home() {
              focus:ring-[#057933]
              text-center
 
+             "
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <input
+                placeholder="ادخل كلمة السر"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
              "
                 required
               />
