@@ -139,7 +139,7 @@ function CIN() {
               id="prenom"
               className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block min-w-72 p-1.5
+              block min-w-[260px] p-1.5
              text-black text-xl text-center
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
@@ -163,11 +163,14 @@ function CIN() {
               htmlFor="custom-input"
               className="block text-sm text-slate-500 mr-4 py-2 px-4
             rounded-md border-0 text-sm font-semibold bg-pink-50
-            text-pink-700 hover:bg-pink-100 cursor-pointer"
+            text-pink-700 hover:bg-pink-100 cursor-pointer
+            "
             >
               إختر ملف
             </label>
-            <label className="text-sm text-slate-500">{selectedFile}</label>
+            <label className="text-sm text-slate-500 mr-3">
+              {selectedFile}
+            </label>
           </div>
           <div className="mt-3 flex justify-center ">
             <div className="ml-4 mr-4">
