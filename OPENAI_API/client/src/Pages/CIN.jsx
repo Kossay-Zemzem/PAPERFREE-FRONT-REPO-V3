@@ -7,17 +7,20 @@ function CIN() {
   const [imageUrl, setImageUrl] = useState(null);
 
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
-
-    // Validate file type (PNG or JPG)
-    const acceptedTypes = ["image/png", "image/jpeg"];
-    if (!acceptedTypes.includes(file.type)) {
-      alert("Please select a PNG or JPG image file.");
-      return;
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      try {
+        const acceptedTypes = ["image/png", "image/jpeg"];
+        if (!acceptedTypes.includes(file.type)) {
+          alert("Please select a PNG or JPG image file.");
+          return;
+        }
+        setSelectedFile(file.name); // Assuming you want to display the file name
+        setImageUrl(URL.createObjectURL(file)); // Generate temporary URL for preview
+      } catch (error) {
+        console.error("Error processing the file", error);
+      }
     }
-
-    setSelectedFile(file);
-    setImageUrl(URL.createObjectURL(file)); // Generate temporary URL for preview
   };
 
   const handleFileUpload = async () => {
@@ -146,7 +149,7 @@ function CIN() {
               required
             />
           </div>
-          <div class="flex flex-row items-center mb-5">
+          <div className="flex flex-row items-center mb-5">
             <input
               type="file"
               accept="image/png,image/jpeg"
@@ -155,7 +158,7 @@ function CIN() {
               hidden
             />
             <label
-              for="custom-input"
+              htmlFor="custom-input"
               className="block text-sm text-slate-500 mr-4 py-2 px-4
             rounded-md border-0 text-sm font-semibold bg-pink-50
             text-pink-700 hover:bg-pink-100 cursor-pointer"
@@ -234,7 +237,7 @@ function CIN() {
             </div>
           </div>
         </form>
-        {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
+        {imageUrl && <img src={imageUrl} alt="Uploaded Image" className="" />}
       </div>
       {/*       <footer className=" h-28">
         <h2 className=" text-white">Footer placerholder text</h2>

@@ -1,7 +1,8 @@
 *8 june 2024*
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### Known issues
-- [ ] Icon inside inputs offsets padding  [Last effort solution-> put the icon outside the input] 
+- [x] Icon inside inputs offsets padding  [Last effort solution-> put the icon outside the input] 
+- [ ] Input icon overlaps the text when it surpasses a certai namount of charcateres 
 - [ ] Logout button gradient doen't work with animations (and smooting them)
 ### High priority
 - [ ] Fix file input 
@@ -12,6 +13,7 @@
 ### Low priority
 ### Implementing Figma concept
 - [x] Add logout icon/text to all pages
+- [ ] Better style the uploaded image preview
 - [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....)
 - [ ] Implement **login/sign** up page before 
 	- [ ] increase size of boxes
