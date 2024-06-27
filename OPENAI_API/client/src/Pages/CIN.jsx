@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 function CIN() {
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState("لم يتم إختيار ملف  "); //Default filename placeholder before uploading a file
   const [imageUrl, setImageUrl] = useState(null);
 
   const handleFileChange = (event) => {
@@ -95,7 +95,7 @@ function CIN() {
         mix-blend-overlay opacity-50"
         />
       </header>
-      <div className="image-upload-container h-full flex items-center align-middle  ">
+      <div className="image-upload-container h-full flex items-center align-middle   ">
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input
@@ -139,16 +139,18 @@ function CIN() {
               id="prenom"
               className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block w-full p-1.5
+              block min-w-72 p-1.5
              text-black text-xl text-center
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
              focus:ring-[#057933]
              hover:scale-110 ease-in-out duration-300
+             
              "
               required
             />
           </div>
+
           <div className="flex flex-row items-center mb-5">
             <input
               type="file"
@@ -163,28 +165,9 @@ function CIN() {
             rounded-md border-0 text-sm font-semibold bg-pink-50
             text-pink-700 hover:bg-pink-100 cursor-pointer"
             >
-              Choose file
+              إختر ملف
             </label>
             <label className="text-sm text-slate-500">{selectedFile}</label>
-          </div>
-          <div>
-            <input
-              type="file"
-              accept="image/png,image/jpeg"
-              onChange={handleFileChange}
-              className="h-12
-              bg-[#D9D9D9] rounded-lg 
-              cursor-pointer
-              file:h-12 
-              file:mr-4 file:py-2 file:px-4
-              file:border-0
-              file:text-sm file:font-semibold
-              file:bg-gradient-to-r from-yellow-500 to-orange-500
-              hover:bg-gray-500 ease-in-out duration-500
-              file:text-white
-              hover:scale-110 ease-in-out duration-300
-              "
-            />
           </div>
           <div className="mt-3 flex justify-center ">
             <div className="ml-4 mr-4">
@@ -237,7 +220,16 @@ function CIN() {
             </div>
           </div>
         </form>
-        {imageUrl && <img src={imageUrl} alt="Uploaded Image" className="" />}
+        {imageUrl && (
+          <img
+            src={imageUrl}
+            alt="Uploaded Image"
+            className="
+          max-w-80
+          
+          "
+          />
+        )}
       </div>
       {/*       <footer className=" h-28">
         <h2 className=" text-white">Footer placerholder text</h2>

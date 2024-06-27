@@ -4,13 +4,14 @@
 - [x] Icon inside inputs offsets padding  [Last effort solution-> put the icon outside the input] 
 - [ ] Input icon overlaps the text when it surpasses a certai namount of charcateres 
 - [ ] Logout button gradient doen't work with animations (and smooting them)
-### High priority
+### High priority  [UNFINISHED]
 - [ ] Fix file input 
 - [x] Figure out how to conditionally render success/failure icon (Bro code  conditional rendering)
 - [ ] 
-###  Medium priority
-
-### Low priority
+###  Medium priority [UNFINISHED]
+- [ ] 
+### Low priority  [UNFINISHED]
+- [ ] 
 ### Implementing Figma concept
 - [x] Add logout icon/text to all pages
 - [ ] Better style the uploaded image preview
