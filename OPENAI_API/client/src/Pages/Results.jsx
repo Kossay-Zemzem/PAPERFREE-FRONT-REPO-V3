@@ -8,7 +8,7 @@ import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import IconResult from "./IconResult";
 
 function Results() {
-  const [progressCIN, setProgressCIN] = useState(82); // Set the initial progress value for CIN
+  const [progressCIN, setProgressCIN] = useState(15); // Set the initial progress value for CIN
   const [progressPass, setProgressPass] = useState(50); // Set the initial progress value for Passeport
   const [progressCert, setProgressCert] = useState(20); // Set the initial progress value for Certificat de residance
 
