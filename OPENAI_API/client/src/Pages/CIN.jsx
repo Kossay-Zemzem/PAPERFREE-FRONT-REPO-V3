@@ -146,7 +146,24 @@ function CIN() {
               required
             />
           </div>
-
+          <div class="flex flex-row items-center mb-5">
+            <input
+              type="file"
+              accept="image/png,image/jpeg"
+              id="custom-input"
+              onChange={handleFileChange}
+              hidden
+            />
+            <label
+              for="custom-input"
+              className="block text-sm text-slate-500 mr-4 py-2 px-4
+            rounded-md border-0 text-sm font-semibold bg-pink-50
+            text-pink-700 hover:bg-pink-100 cursor-pointer"
+            >
+              Choose file
+            </label>
+            <label className="text-sm text-slate-500">{selectedFile}</label>
+          </div>
           <div>
             <input
               type="file"
