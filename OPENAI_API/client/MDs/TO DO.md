@@ -12,26 +12,28 @@
 - [ ] 
 ### Low priority  [UNFINISHED]
 - [ ] 
-### Implementing Figma concept
+### Implementing / modifying components and parts
 - [x] Add logout icon/text to all pages
-- [ ] Better style the uploaded image preview
 - [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....)
 - [ ] Implement **login/sign** up page before 
 	- [ ] increase size of boxes
 - [ ] Implement **Results** page
 	- [ ] Progress bar animation (entering) later
-	- [ ]  Success/failure variable icon and text loading
-- [ ] [Optional] Test backgournd animation CSS [[so far so many issues]]
+	- [x]  Success/failure variable icon and text loading
+
+### Visual changes
+- [ ] Remove reset button from all pages
+- [ ] Better style the uploaded image preview - make image stay in a fixed range , no layout shifting [in progress]
+- [ ] Add icons to sign up page (and other places if possible) [In progress]
+- [ ] -Improve input file design [In progress] [first iteration done]
+- [x]  Figure out how to change file upload text to araribic OR remove it
+- [ ] -add animations and smooth things to elements
+	- [ ] Improve button hover and click animations 
+- [ ] Test background animation CSS [[so far so many issues]]
 ### Functional changes
 - [ ] -Figure out why the bottom footer doesn't reach the very end of the page
 - [ ] Figure out why the custom cursor doesn't work in the entire page (only top half works)
-### Visual changes
 
-- [ ] Add icons to sign up page (and other places if possible) [In progress]
-- [ ] -Improve input file design [In progress]
-- [ ]  Figure out how to change file upload text to araribic OR remove it
-- [ ] -add animations and smooth things to elements
-	- [ ] Improve button hover and click animations 
 
 ### Other changes
 

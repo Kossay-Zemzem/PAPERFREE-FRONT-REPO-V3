@@ -61,7 +61,7 @@ function Home() {
               relative mb-5 text-gray-400 focus-within:text-red-600
                          hover:scale-110 ease-in-out duration-300"
             >
-              <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute " />
+              <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
                 placeholder="اللقب"
                 type="text"

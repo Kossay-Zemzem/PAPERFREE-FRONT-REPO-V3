@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
+import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
+
 function CIN() {
   const [selectedFile, setSelectedFile] = useState("لم يتم إختيار ملف  "); //Default filename placeholder before uploading a file
   const [imageUrl, setImageUrl] = useState(null);
@@ -95,8 +97,12 @@ function CIN() {
         mix-blend-overlay opacity-50"
         />
       </header>
-      <div className="image-upload-container h-full flex items-center align-middle   ">
-        <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
+      <div
+        className="image-upload-container 
+      h-full flex items-center align-middle justify-center
+      "
+      >
+        <form onSubmit={SendRequestToChat} className="">
           <div className="mb-5">
             <input
               placeholder="الأسم"
@@ -151,7 +157,10 @@ function CIN() {
             />
           </div>
 
-          <div className="flex flex-row items-center mb-5">
+          <div
+            className="flex flex-row items-center mb-5
+                    hover:scale-110 ease-in-out duration-300"
+          >
             <input
               type="file"
               accept="image/png,image/jpeg"
@@ -159,18 +168,25 @@ function CIN() {
               onChange={handleFileChange}
               hidden
             />
+            <ArrowUpTrayIcon
+              className="absolute mr-1.5 w-7 pointer-events-none
+            text-red-600"
+            />
             <label
               htmlFor="custom-input"
-              className="block text-sm text-slate-500 mr-4 py-2 px-4
-            rounded-md border-0 text-sm font-semibold bg-pink-50
-            text-pink-700 hover:bg-pink-100 cursor-pointer
+              className="block cursor-pointer
+               py-1.5 pr-10 pl-3 
+              border border-red-600 rounded-lg
+              text-lg
+              font-semibold
+              text-gray-400
+              font-semibold bg-[#D9D9D9] 
+         
             "
             >
               إختر ملف
             </label>
-            <label className="text-sm text-slate-500 mr-3">
-              {selectedFile}
-            </label>
+            <label className="text-sm text-white mr-3">{selectedFile}</label>
           </div>
           <div className="mt-3 flex justify-center ">
             <div className="ml-4 mr-4">
@@ -228,7 +244,9 @@ function CIN() {
             src={imageUrl}
             alt="Uploaded Image"
             className="
-          max-w-80
+            p-2 mr-28
+            max-w-full max-h-[80vh]
+          border-2 border-gray-100
           
           "
           />

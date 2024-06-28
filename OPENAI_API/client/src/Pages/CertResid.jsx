@@ -2,22 +2,27 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
+import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
+
 function CertResid() {
-  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedFile, setSelectedFile] = useState("لم يتم إختيار ملف  "); //Default filename placeholder before uploading a file
   const [imageUrl, setImageUrl] = useState(null);
 
   const handleFileChange = (event) => {
-    const file = event.target.files[0];
-
-    // Validate file type (PNG or JPG)
-    const acceptedTypes = ["image/png", "image/jpeg"];
-    if (!acceptedTypes.includes(file.type)) {
-      alert("Please select a PNG or JPG image file.");
-      return;
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      try {
+        const acceptedTypes = ["image/png", "image/jpeg"];
+        if (!acceptedTypes.includes(file.type)) {
+          alert("Please select a PNG or JPG image file.");
+          return;
+        }
+        setSelectedFile(file.name); // Assuming you want to display the file name
+        setImageUrl(URL.createObjectURL(file)); // Generate temporary URL for preview
+      } catch (error) {
+        console.error("Error processing the file", error);
+      }
     }
-
-    setSelectedFile(file);
-    setImageUrl(URL.createObjectURL(file)); // Generate temporary URL for preview
   };
 
   const handleFileUpload = async () => {
@@ -145,25 +150,36 @@ function CertResid() {
               required
             />
           </div>
-
-          <div>
+          <div
+            className="flex flex-row items-center mb-5
+                    hover:scale-110 ease-in-out duration-300"
+          >
             <input
               type="file"
               accept="image/png,image/jpeg"
+              id="custom-input"
               onChange={handleFileChange}
-              className="h-12
-                bg-[#D9D9D9] rounded-lg 
-                cursor-pointer
-                file:h-12 
-                file:mr-4 file:py-2 file:px-4
-                file:border-0
-                file:text-sm file:font-semibold
-                file:bg-gradient-to-r from-yellow-500 to-orange-500
-                hover:bg-gray-500 ease-in-out duration-500
-                file:text-white
-                hover:scale-110 ease-in-out duration-300
-                "
+              hidden
             />
+            <ArrowUpTrayIcon
+              className="absolute mr-1.5 w-7 pointer-events-none
+            text-red-600"
+            />
+            <label
+              htmlFor="custom-input"
+              className="block cursor-pointer
+               py-1.5 pr-10 pl-3 
+              border border-red-600 rounded-lg
+              text-lg
+              font-semibold
+              text-gray-400
+              font-semibold bg-[#D9D9D9] 
+         
+            "
+            >
+              إختر ملف
+            </label>
+            <label className="text-sm text-white mr-3">{selectedFile}</label>
           </div>
           <div className="mt-3 flex justify-center ">
             <div className="ml-4 mr-4">
