@@ -182,30 +182,7 @@ function CertResid() {
             <label className="text-sm text-white mr-3">{selectedFile}</label>
           </div>
           <div className="mt-3 flex justify-center ">
-            <div className="ml-4 mr-4">
-              <button
-                type="reset"
-                className="
-                bg-gradient-to-t from-[#ac1e01] from-21% to-[#F23326]
-                rounded-lg
-                text-black text-lg 
-                font-medium 
-                w-full sm:w-20
-                px-3 py-2 
-                text-center
-                hover:ease-in-out duration-500
-                hover:bg-opacity-50
-                
-                hover:text-white  
-                hover:ring-zinc-300 
-                hover:ring-2 
-                hover:outline-none
-  
-                "
-              >
-                <Link to="/">عودة</Link>
-              </button>
-            </div>
+            {/* in case you need to add another button or text add it under this div */}
             <div className="ml-4 mr-4">
               <button
                 type="submit"
