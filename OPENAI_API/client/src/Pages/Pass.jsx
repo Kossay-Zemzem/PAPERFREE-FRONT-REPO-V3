@@ -69,7 +69,7 @@ function Pass() {
     }
   };
   return (
-    <div>
+    <div className="flex flex-col h-[100vh]">
       <header className=" h-24">
         <div className="flex justify-between">
           <Link>
@@ -96,7 +96,11 @@ function Pass() {
         mix-blend-overlay opacity-50"
         />
       </header>
-      <div className="image-upload-container h-full flex items-center align-middle  ">
+      <div
+        className="image-upload-container 
+      h-full flex items-center justify-center mb-20
+      "
+      >
         <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
           <div className="mb-5">
             <input

@@ -5,7 +5,7 @@ import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 
 function Home() {
-  /* h-[calc(100vh-103px)] */
+  /* h-[calc(100vh-131px)] */
   return (
     <div>
       <header className="flex justify-center">
@@ -22,7 +22,7 @@ function Home() {
       h-[calc(100vh-131px)]
       "
       >
-        <div className="flex gap-x-20 mb-24">
+        <div className="flex gap-x-20 mb-20">
           <div
             className="bg-black bg-opacity-35 rounded-lg
          pr-8 pl-8 pt-3 pb-3 w-[345px] 

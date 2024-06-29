@@ -70,7 +70,7 @@ function CIN() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col h-[100vh]">
       <header className=" h-24">
         <div className="flex justify-between">
           <Link>
@@ -99,7 +99,7 @@ function CIN() {
       </header>
       <div
         className="image-upload-container 
-      h-full flex items-center align-middle justify-center
+      h-full flex items-center justify-center mb-20
       "
       >
         <form onSubmit={SendRequestToChat} className="">
