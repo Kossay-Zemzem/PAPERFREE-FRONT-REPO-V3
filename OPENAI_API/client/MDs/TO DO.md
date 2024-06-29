@@ -1,4 +1,9 @@
-*8 june 2024*
+### TODAY'S OBJECTIVE
+- [ ] Center every page the middle (veritcally and horizontally)
+- [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe]
+- [ ] add animation to "details button" like the ones in other buttons for now
+- [ ] Better style the uploaded image preview - make image stay in a fixed range , no layout shifting [in progress]
+### Misc
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### Known issues
 - [x] Icon inside inputs offsets padding  [Last effort solution-> put the icon outside the input] 
@@ -22,7 +27,8 @@
 	- [x]  Success/failure variable icon and text loading
 
 ### Visual changes
-- [ ] Remove reset button from all pages
+- [x] Remove reset button from all pages
+- [ ] Center every page the middle (veritcally and horizontally)
 - [ ] Better style the uploaded image preview - make image stay in a fixed range , no layout shifting [in progress]
 - [ ] Add icons to sign up page (and other places if possible) [In progress]
 - [ ] -Improve input file design [In progress] [first iteration done]

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { XCircleIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
+import { LockClosedIcon } from "@heroicons/react/24/solid";
+
 function Home() {
   /* h-[calc(100vh-103px)] */
   return (
@@ -22,7 +25,7 @@ function Home() {
         <div className="flex gap-x-20 mb-24">
           <div
             className="bg-black bg-opacity-35 rounded-lg
-         pr-8 pl-8 pt-3 pb-3
+         pr-8 pl-8 pt-3 pb-3 w-[345px] 
         "
           >
             <div
@@ -34,41 +37,24 @@ function Home() {
             bg-clip-text
             text-2xl
             mb-5 mt-1
-          
+            
           "
             >
               إنشاء حساب جديد
             </div>
-            <div className="mb-5">
-              <input
-                placeholder="الأسم"
-                type="text"
-                id="prenom"
-                className="bg-[#D9D9D9]
-              border border-red-600 rounded-lg
-              block p-1.5
-             text-black text-xl text-center
-             placeholder-gray-400 placeholder:text-center 
-             focus:ring-2             
-             focus:ring-[#057933]
-             hover:scale-110 ease-in-out duration-300
-             "
-                required
-              />
-            </div>
             <div
               className="
-              relative mb-5 text-gray-400 focus-within:text-red-600
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
                          hover:scale-110 ease-in-out duration-300"
             >
               <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
-                placeholder="اللقب"
+                placeholder="الإسم"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block pt-1.5 pb-1.5 pr-3
+              block pt-1.5 pb-1.5 pr-3 w-full 
              text-black text-xl
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
@@ -79,36 +65,94 @@ function Home() {
                 required
               />
             </div>
-            <div className="mb-5">
+            <div
+              className="
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
-                placeholder="ادخل كلمة السر"
+                placeholder="اللقب"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block p-1.5
-             text-black text-xl text-center
+              block pt-1.5 pb-1.5 pr-3 w-full
+             text-black text-xl
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
              focus:ring-[#057933]
-             hover:scale-110 ease-in-out duration-300
+             text-center
+
              "
                 required
               />
             </div>
-            <div className="mb-5">
+            <div
+              className="
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <EnvelopeIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
-                placeholder="ادخل كلمة السر مجداد"
+                placeholder="البريد الإلكتروني"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block p-1.5
-             text-black text-xl text-center
+              block pt-1.5 pb-1.5 pr-3 w-full
+             text-black text-xl
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
              focus:ring-[#057933]
-             hover:scale-110 ease-in-out duration-300
+             text-center
+
+             "
+                required
+              />
+            </div>
+            <div
+              className="
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <LockClosedIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
+              <input
+                placeholder="أدخل كلمة العبور"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block pt-1.5 pb-1.5 pr-3 w-full
+             text-black text-xl
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             text-center
+
+             "
+                required
+              />
+            </div>
+            <div
+              className="
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <LockClosedIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
+              <input
+                placeholder="أدخل كلمة العبور مجداد"
+                type="text"
+                id="prenom"
+                className="bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block pt-1.5 pb-1.5 pr-3 w-full
+             text-black text-xl
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             text-center
+
              "
                 required
               />
@@ -139,14 +183,14 @@ function Home() {
             </div>
           </div>
           <div
-            className="bg-[#C3BDBD] w-1 h-64 mix-blend-soft-light opacity-65
+            className="bg-[#C3BDBD] w-1 h-72 mix-blend-soft-light opacity-65
         
         "
           ></div>
           <div
             className="
           bg-black bg-opacity-35 rounded-lg
-        ml-4 mr-4 pr-8 pl-8 pt-3 pb-3 h-64
+        ml-4 mr-4 pr-8 pl-8 pt-3 pb-3 h-64 w-72 
         "
           >
             <div
@@ -163,36 +207,48 @@ function Home() {
             >
               تسجيل الدخول
             </div>
-            <div className="mb-5">
+            <div
+              className="
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <EnvelopeIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
                 placeholder="البريد الإلكتروني"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block w-full p-1.5
-             text-black text-xl text-center
+              block pt-1.5 pb-1.5 pr-3 w-full
+             text-black text-xl
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
              focus:ring-[#057933]
-             hover:scale-110 ease-in-out duration-300
+             text-center
+
              "
                 required
               />
             </div>
-            <div className="mb-5">
+            <div
+              className="
+              relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
+                         hover:scale-110 ease-in-out duration-300"
+            >
+              <LockClosedIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
-                placeholder="ادخل كلمة السر"
+                placeholder="أدخل كلمة العبور"
                 type="text"
                 id="prenom"
                 className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block w-full p-1.5
-             text-black text-xl text-center
+              block pt-1.5 pb-1.5 pr-3 w-full
+             text-black text-xl
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             
              focus:ring-[#057933]
-             hover:scale-110 ease-in-out duration-300
+             text-center
+
              "
                 required
               />
