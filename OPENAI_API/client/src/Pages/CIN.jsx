@@ -99,10 +99,14 @@ function CIN() {
       </header>
       <div
         className="image-upload-container 
-      h-full flex items-center justify-center mb-20
+      h-full mb-20
+      flex items-center justify-around 
       "
       >
-        <form onSubmit={SendRequestToChat} className="">
+        <form
+          onSubmit={SendRequestToChat}
+          className={`${imageUrl ? `mr-24` : ``}`}
+        >
           <div className="mb-5">
             <input
               placeholder="الأسم"
@@ -219,16 +223,22 @@ function CIN() {
           </div>
         </form>
         {imageUrl && (
-          <img
-            src={imageUrl}
-            alt="Uploaded Image"
-            className="
-            p-2 mr-28 mt-4
-            max-w-full max-h-[80vh]
-          border-2 border-gray-100
-          
-          "
-          />
+          <div
+            className={`
+          flex
+          h-[80vh] w-[100vh]
+          overflow-hidden
+          mt-6 ${imageUrl ? `ml-16` : ``}  `}
+          >
+            <img
+              src={imageUrl}
+              alt="Uploaded Image"
+              className="
+            max-w-full max-h-full
+            object-contain
+    "
+            />
+          </div>
         )}
       </div>
       {/*       <footer className=" h-28">

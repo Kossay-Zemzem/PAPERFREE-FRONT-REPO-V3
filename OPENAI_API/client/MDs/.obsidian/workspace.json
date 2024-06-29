@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TO DO (OLD 26 Juin).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3d848e372c071b0a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "TO DO.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,11 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3d848e372c071b0a",
+  "active": "27d279d809fd8bf3",
   "lastOpenFiles": [
     "TO DO (OLD 26 Juin).md",
-    "TO LEARN.md",
     "TO DO.md",
+    "TO LEARN.md",
     "Untitled",
     "README.md",
     "CHANGELOG.md"
