@@ -74,7 +74,7 @@ function Results() {
             تواقف بنسبة {progressCIN} %
           </div>
           <div className="relative flex items-center">
-            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2" />
+            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2 pointer-events-none" />
             <button
               type="submit"
               className="
@@ -83,12 +83,10 @@ function Results() {
                 text-black text-lg 
                 text-center
                 font-semibold
-                pl-2
-                pr-9 
-                py-2
-                mt-2
-                mb-2  
-                
+                pl-2 pr-9 py-2 mt-2 mb-2
+
+                hover:ease-in-out duration-500
+                hover:
                 "
             >
               <Link to="/">التفاصيل</Link>

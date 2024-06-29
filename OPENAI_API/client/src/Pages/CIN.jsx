@@ -186,7 +186,9 @@ function CIN() {
             >
               إختر ملف
             </label>
-            <label className="text-sm text-white mr-3">{selectedFile}</label>
+            <label className="text-sm text-white mr-3 overflow-hidden whitespace-nowrap text-overflow-ellipsis max-w-28">
+              {selectedFile}
+            </label>
           </div>
           <div className="mt-3 flex justify-center ">
             {/* in case you need to add another button or text add it under this div */}
@@ -221,7 +223,7 @@ function CIN() {
             src={imageUrl}
             alt="Uploaded Image"
             className="
-            p-2 mr-28
+            p-2 mr-28 mt-4
             max-w-full max-h-[80vh]
           border-2 border-gray-100
           
