@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  margin: 0; /*to make [100vh] actually 100% of the viewport width*/
+  padding: 0;
+}
+
+
 /*
  @keyframes gradientAnimation {
   0%, 100% {
@@ -19,6 +25,9 @@ cursor: url('./src/assets/icons8-select-cursor-16.png'), auto;
 "> 
 */
 body{
+    margin: 0; /*to make [100vh] actually 100% of the viewport width*/
+    padding: 0; /*to make [100vh] actually 100% of the viewport width*/
+
     background: rgb(8,62,47);
     background: radial-gradient(circle, rgba(8,62,47,1) 0%, rgba(11,19,41,1) 100%);
     background-position: center;
