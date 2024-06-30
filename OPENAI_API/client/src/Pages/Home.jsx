@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { XCircleIcon } from "@heroicons/react/24/solid";
+import { UserIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 
@@ -70,7 +70,7 @@ function Home() {
               relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
                          hover:scale-110 ease-in-out duration-300"
             >
-              <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
+              <UserIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
                 placeholder="الإسم"
                 type="text"
@@ -93,7 +93,7 @@ function Home() {
               relative mb-5 text-gray-400 focus-within:text-orange-400 ease-in-out duration-300
                          hover:scale-110 ease-in-out duration-300"
             >
-              <XCircleIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
+              <UserIcon className="w-7 h-7 mt-1.5 mr-2 absolute pointer-events-none " />
               <input
                 placeholder="اللقب"
                 type="text"

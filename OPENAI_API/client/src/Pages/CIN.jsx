@@ -270,6 +270,7 @@ function CIN() {
               className="
             max-w-full max-h-full
             object-contain
+          
     "
             />
           </div>
