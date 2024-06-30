@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 MDs/
+/OPENAI_API/client/MDs
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
