@@ -90,14 +90,18 @@ function CIN() {
   const isVisible1 = useIsVisible(ref1); /*for main body animation */
   const ref2 = useRef();
   const isVisible2 = useIsVisible(ref2); /*for header only animation */
+  const ref3 = useRef();
+  const isVisible3 =
+    useIsVisible(
+      ref3
+    ); /*for horizontal line animation (<hr> tag) because it fades in to 50% opacity only */
 
   return (
     <div className="flex flex-col h-[100vh]">
-      <header
-        ref={ref2}
-        className={` h-24 transition ease-in-out duration-300 ${isVisible1 ? "opacity-100" : "opacity-0"} ease-in-out duration-700 `}
-      >
-        <div className="flex justify-between">
+      <header ref={ref2} className={` h-24  `}>
+        <div
+          className={`flex justify-between transition ease-in-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
+        >
           <Link>
             <img
               className="w-60 mt-6 mr-4"
@@ -118,8 +122,11 @@ function CIN() {
           </Link>
         </div>
         <hr
-          className="mt-3 border-2
-        mix-blend-overlay opacity-50"
+          ref={ref3}
+          className={`mt-3 border-2
+        mix-blend-overlay
+        transition ease-in-out duration-700 ${isVisible3 ? "opacity-50" : "opacity-0"}
+        `}
         />
       </header>
       <div
