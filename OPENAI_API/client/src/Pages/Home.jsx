@@ -1,13 +1,36 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { LockClosedIcon } from "@heroicons/react/24/solid";
 
 function Home() {
-  /* h-[calc(100vh-131px)] */
+  /* function that detects when elements are on screen and returns true */
+  function useIsVisible(ref) {
+    const [isIntersecting, setIntersecting] = useState(false);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        setIntersecting(entry.isIntersecting);
+      });
+
+      observer.observe(ref.current);
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref]);
+
+    return isIntersecting;
+  }
+  /* IsVisible1 is True if element appears on screen , so it goes from False to True and that's where the transition animation happens */
+  const ref1 = useRef();
+  const isVisible1 = useIsVisible(ref1);
+
   return (
-    <div>
+    <div
+      ref={ref1}
+      className={`transition ease-in-out duration-300 ${isVisible1 ? "opacity-100" : "opacity-0"} ease-in-out duration-700 ${isVisible1 ? "translate-x-0" : "translate-y-4"} `}
+    >
       <header className="flex justify-center">
         <img
           className="w-96 mt-6 mr-4 mb-6"
@@ -183,7 +206,7 @@ function Home() {
             </div>
           </div>
           <div
-            className="bg-[#C3BDBD] w-1 h-72 mix-blend-soft-light opacity-65
+            className="bg-[#C3BDBD] w-1 h-72 mix-blend-soft-light opacity-30
         
         "
           ></div>

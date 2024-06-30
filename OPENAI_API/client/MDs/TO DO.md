@@ -1,8 +1,10 @@
 ### TODAY'S OBJECTIVE
+- [x] Test page animation using UseRef() hook and opacitiy-transition
 - [x] Center every page the middle (veritcally and horizontally)
 - [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe]
 - [ ] add animation to "details button" like the ones in other buttons for now
 - [x] Better style the uploaded image preview - make image stay in a fixed range , no layout shifting [in progress] (filename not wrapping is causing th width of the thing to increase )
+- [ ] add smooth transtions between pages 
 ### Misc
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### Known issues
