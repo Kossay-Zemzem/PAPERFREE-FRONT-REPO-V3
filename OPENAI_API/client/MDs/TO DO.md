@@ -1,7 +1,8 @@
 ### TODAY'S OBJECTIVE
 
 - [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe] 
-	- [ ]  add the title card with icon on top middle and drop the form down (basically returning it to original position)
+	- [x]  add the title card with icon on top middle and drop the form down (basically returning it to original position)
+	- [ ] Consider scaling it up to occupy more space on top. Make it wider than the form cards which means it will have to be put seperatly between the form and the header and might mess up the image preview
 - [ ] Add animation to progress bar
 - [ ] Check background animation (find better ways maybe ? idk)
 - [ ] add transition animation to the rest of the pages 
