@@ -33,7 +33,7 @@ function Home() {
     >
       <header className="flex justify-center">
         <img
-          className="w-96 mt-6 mr-4 mb-6"
+          className="w-96 mt-10 mr-4 mb-6"
           src="../public/images/logoBETA.png"
         />
       </header>

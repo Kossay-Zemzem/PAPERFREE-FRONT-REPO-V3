@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 html{
   margin: 0; /*to make [100vh] actually 100% of the viewport width*/
   padding: 0;
