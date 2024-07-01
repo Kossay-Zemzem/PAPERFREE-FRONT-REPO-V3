@@ -130,8 +130,8 @@ function CIN() {
         />
       </header>
       <div
-        className="flex justify-center items-center h-24 
-             gap-2
+        className="flex justify-center items-center self-center h-24 w-96 
+             gap-2 mt-10
           bg-black bg-opacity-35 rounded-lg
           shadow-lg
         "
@@ -145,7 +145,7 @@ function CIN() {
             /> */}
         <svg
           className="inline-block
-              w-14
+              w-24
              "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -182,7 +182,7 @@ function CIN() {
             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
             text-transparent
             bg-clip-text
-            text-2xl
+            text-3xl
             
           "
         >
