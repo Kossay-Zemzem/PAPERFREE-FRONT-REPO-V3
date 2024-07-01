@@ -130,6 +130,66 @@ function CIN() {
         />
       </header>
       <div
+        className="flex justify-center items-center h-24 
+             gap-2
+          bg-black bg-opacity-35 rounded-lg
+          shadow-lg
+        "
+      >
+        {/*             <IdentificationIcon
+              className="inline-block w-6 h-6
+             ml-3 mr-2
+             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
+            
+            "
+            /> */}
+        <svg
+          className="inline-block
+              w-14
+             "
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+        >
+          <defs>
+            <linearGradient
+              id="iconGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                style={{ stopColor: "rgb(254, 209, 54)", stopOpacity: 1 }}
+              />
+              <stop
+                offset="100%"
+                style={{ stopColor: "rgb(246, 124, 11)", stopOpacity: 1 }}
+              />
+            </linearGradient>
+          </defs>
+          <path
+            fill="url(#iconGradient)"
+            fill-rule="evenodd"
+            d="M3 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm2.5 5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M10 5.75a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75m.75 3.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5zM10 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 10 8m-2.378 3c.346 0 .583-.343.395-.633A2.998 2.998 0 0 0 5.5 9a2.998 2.998 0 0 0-2.517 1.367c-.188.29.05.633.395.633z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        <div
+          className=" 
+            font-lalezar
+            text-center
+            bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
+            text-transparent
+            bg-clip-text
+            text-2xl
+            
+          "
+        >
+          بطاقة التعريف الوطنية
+        </div>
+      </div>
+      <div
         ref={ref1}
         className={`image-upload-container 
       h-full mb-20
@@ -141,66 +201,6 @@ function CIN() {
           onSubmit={SendRequestToChat}
           className={`${imageUrl ? `mr-24` : ``}`}
         >
-          <div
-            className="flex justify-center items-center h-16 
-            mb-10 gap-2
-          bg-black bg-opacity-35 rounded-lg
-          shadow-lg
-        "
-          >
-            {/*             <IdentificationIcon
-              className="inline-block w-6 h-6
-             ml-3 mr-2
-             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
-            
-            "
-            /> */}
-            <svg
-              className="inline-block
-              w-14
-             "
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-            >
-              <defs>
-                <linearGradient
-                  id="iconGradient"
-                  x1="0%"
-                  y1="0%"
-                  x2="100%"
-                  y2="100%"
-                >
-                  <stop
-                    offset="0%"
-                    style={{ stopColor: "rgb(254, 209, 54)", stopOpacity: 1 }}
-                  />
-                  <stop
-                    offset="100%"
-                    style={{ stopColor: "rgb(246, 124, 11)", stopOpacity: 1 }}
-                  />
-                </linearGradient>
-              </defs>
-              <path
-                fill="url(#iconGradient)"
-                fill-rule="evenodd"
-                d="M3 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm2.5 5a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M10 5.75a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5a.75.75 0 0 1-.75-.75m.75 3.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5zM10 8a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5h-1.5A.75.75 0 0 1 10 8m-2.378 3c.346 0 .583-.343.395-.633A2.998 2.998 0 0 0 5.5 9a2.998 2.998 0 0 0-2.517 1.367c-.188.29.05.633.395.633z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <div
-              className=" 
-            font-lalezar
-            text-center
-            bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
-            text-transparent
-            bg-clip-text
-            text-2xl
-            
-          "
-            >
-              بطاقة التعريف الوطنية
-            </div>
-          </div>
           <div className="mb-5">
             <input
               placeholder="الأسم"
@@ -320,8 +320,8 @@ function CIN() {
           <div
             className={`
           flex
-          h-[80vh] w-[100vh]
-          overflow-hidden
+          h-[75vh] w-[100vh]
+          overflow-hidden 
           mt-6 ${imageUrl ? `ml-16` : ``}  `}
           >
             <img
@@ -330,6 +330,7 @@ function CIN() {
               className="
             max-w-full max-h-full
             object-contain
+
           
     "
             />
