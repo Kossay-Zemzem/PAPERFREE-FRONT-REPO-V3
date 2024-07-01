@@ -1,8 +1,10 @@
-### TODAY'S OBJECTIVE
+- [ ] Consider recording the part of the app that works to show animtions and upload functionalty
+### OBJECTIVES (because categorizing them is taking too much time)
 
-- [ ] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe] 
+- [x] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe] 
 	- [x]  add the title card with icon on top middle and drop the form down (basically returning it to original position)
-	- [ ] Consider scaling it up to occupy more space on top. Make it wider than the form cards which means it will have to be put seperatly between the form and the header and might mess up the image preview
+	- [x] Consider scaling it up to occupy more space on top. Make it wider than the form cards which means it will have to be put seperatly between the form and the header and might mess up the image preview
+- [ ] Consider which version of title card to use (main branch VS alternate-card-size-test branch VS title-alt-3 )
 - [ ] Add animation to progress bar
 - [ ] Check background animation (find better ways maybe ? idk)
 - [ ] add transition animation to the rest of the pages 
