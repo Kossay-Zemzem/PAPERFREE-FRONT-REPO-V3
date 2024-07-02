@@ -144,18 +144,11 @@ function CIN() {
         >
           <div
             className="flex justify-center items-center h-16 
-            mb-10 gap-2
+            mb-10 gap-2 min-w-[260px]
           bg-black bg-opacity-35 rounded-lg
           shadow-lg
         "
           >
-            {/*             <IdentificationIcon
-              className="inline-block w-6 h-6
-             ml-3 mr-2
-             bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
-            
-            "
-            /> */}
             <svg
               className="inline-block
               w-14
@@ -244,7 +237,7 @@ function CIN() {
               id="prenom"
               className="bg-[#D9D9D9]
               border border-red-600 rounded-lg
-              block min-w-[260px] p-1.5
+              block w-full p-1.5
              text-black text-xl text-center
              placeholder-gray-400 placeholder:text-center 
              focus:ring-2             

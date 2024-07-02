@@ -101,7 +101,60 @@ function CertResid() {
       h-full flex items-center justify-center mb-20
       "
       >
-        <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
+        <form onSubmit={SendRequestToChat} className="">
+          <div
+            className="flex justify-center items-center h-16 
+            mb-10 gap-2 min-w-[260px]
+          bg-black bg-opacity-35 rounded-lg
+          shadow-lg
+        "
+          >
+            <svg
+              className="inline-block
+              w-12
+             "
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <defs>
+                <linearGradient
+                  id="iconGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style={{ stopColor: "rgb(254, 209, 54)", stopOpacity: 1 }}
+                  />
+                  <stop
+                    offset="100%"
+                    style={{ stopColor: "rgb(246, 124, 11)", stopOpacity: 1 }}
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#iconGradient)"
+                fillRule="evenodd"
+                d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2zm1 5.75A.75.75 0 0 1 5.75 7h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 7.75m0 3a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75"
+                clipRule="evenodd"
+              />
+            </svg>
+            <div
+              className=" 
+            font-lalezar
+            text-center
+            bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
+            text-transparent
+            bg-clip-text
+            text-2xl
+            
+          "
+            >
+              شهادة الإقامة
+            </div>
+          </div>
           <div className="mb-5">
             <input
               placeholder="عنوان"

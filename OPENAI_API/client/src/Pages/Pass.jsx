@@ -101,7 +101,60 @@ function Pass() {
       h-full flex items-center justify-center mb-20
       "
       >
-        <form onSubmit={SendRequestToChat} className="max-lg mx-auto">
+        <form onSubmit={SendRequestToChat} className="">
+          <div
+            className="flex justify-center items-center h-16 
+            mb-10 gap-2 min-w-[260px]
+          bg-black bg-opacity-35 rounded-lg
+          shadow-lg
+        "
+          >
+            <svg
+              className="inline-block
+              w-14
+             "
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+            >
+              <defs>
+                <linearGradient
+                  id="iconGradient"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style={{ stopColor: "rgb(254, 209, 54)", stopOpacity: 1 }}
+                  />
+                  <stop
+                    offset="100%"
+                    style={{ stopColor: "rgb(246, 124, 11)", stopOpacity: 1 }}
+                  />
+                </linearGradient>
+              </defs>
+              <path
+                fill="url(#iconGradient)"
+                fillRule="evenodd"
+                d="M2.5 0A1.5 1.5 0 0 0 1 1.5v11A1.5 1.5 0 0 0 2.5 14h9a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 11.5 0zm5 9.364A3.403 3.403 0 0 0 10.364 6.5H7.5zm-1 0A3.402 3.402 0 0 1 3.636 6.5H6.5zm1-3.864h2.864A3.403 3.403 0 0 0 7.5 2.636zm-1-2.864V5.5H3.636A3.402 3.402 0 0 1 6.5 2.636"
+                clipRule="evenodd"
+              />
+            </svg>
+            <div
+              className=" 
+            font-lalezar
+            text-center
+            bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
+            text-transparent
+            bg-clip-text
+            text-2xl
+            
+          "
+            >
+              جواز السفر
+            </div>
+          </div>
           <div className="mb-5">
             <input
               placeholder="كذا وكذا"
