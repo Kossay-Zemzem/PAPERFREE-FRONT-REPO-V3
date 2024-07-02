@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
-
 import IconResult from "./IconResult";
 
 function Results() {
@@ -53,19 +54,40 @@ function Results() {
         mix-blend-overlay opacity-50"
         />
       </header>
+      {/*       <motion.h1 animate={{ color: "#F67C0B" }}>Hiiiiiiiii</motion.h1> */}
       <div className="flex justify-around">
         <div className="flex flex-col items-center w-80">
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
           </div>
+
           <div
             className=" bg-gray-200 h-4 rounded-full w-full"
             style={{ direction: "ltr" }}
           >
-            <div
-              className={`${getProgressBarColor(progressCIN)} h-full rounded-full`}
-              style={{ width: `${progressCIN}%` }}
-            ></div>
+            <motion.div
+              className={`${getProgressBarColor(progressCIN)} h-full rounded-full `}
+              initial={{ width: 0, opacity: 0 }}
+              animate={{
+                width: `${80}%`,
+                opacity: 1,
+                transition: {
+                  width: {
+                    ease: "easeInOut",
+                    duration: 1,
+                  },
+                  opacity: {
+                    duration: 0.1,
+                  },
+                },
+              }}
+            ></motion.div>
+            {/*             <div
+              className={`${getProgressBarColor(progressCIN)} h-full rounded-full `}
+              style={{
+                width: `${progressCIN}%`,
+              }}
+            ></div> */}
           </div>
           <div
             className="text-white text-center mt-1
