@@ -9,7 +9,7 @@ import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import IconResult from "./IconResult";
 
 function Results() {
-  const [progressCIN, setProgressCIN] = useState(15); // Set the initial progress value for CIN
+  const [progressCIN, setProgressCIN] = useState(50); // Set the initial progress value for CIN
   const [progressPass, setProgressPass] = useState(50); // Set the initial progress value for Passeport
   const [progressCert, setProgressCert] = useState(20); // Set the initial progress value for Certificat de residance
 
@@ -54,7 +54,6 @@ function Results() {
         mix-blend-overlay opacity-50"
         />
       </header>
-      {/*       <motion.h1 animate={{ color: "#F67C0B" }}>Hiiiiiiiii</motion.h1> */}
       <div className="flex justify-around">
         <div className="flex flex-col items-center w-80">
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
@@ -69,7 +68,7 @@ function Results() {
               className={`${getProgressBarColor(progressCIN)} h-full rounded-full `}
               initial={{ width: 0, opacity: 0 }}
               animate={{
-                width: `${80}%`,
+                width: `${progressCIN}%`,
                 opacity: 1,
                 transition: {
                   width: {
