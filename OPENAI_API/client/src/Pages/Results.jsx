@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -25,11 +25,39 @@ function Results() {
       return "bg-gray-500"; // Default color if progress is out of expected range
     }
   }
+  /* function that detects when elements are on screen and returns true, used for page animations  */
+  function useIsVisible(ref) {
+    const [isIntersecting, setIntersecting] = useState(false);
 
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        setIntersecting(entry.isIntersecting);
+      });
+
+      observer.observe(ref.current);
+      return () => {
+        observer.disconnect();
+      };
+    }, [ref]);
+
+    return isIntersecting;
+  }
+  /* IsVisible1 is True if element appears on screen , so it goes from False to True and that's where the transition animation happens */
+  const ref1 = useRef();
+  const isVisible1 = useIsVisible(ref1); /*for main body animation */
+  const ref2 = useRef();
+  const isVisible2 = useIsVisible(ref2); /*for header only animation */
+  const ref3 = useRef();
+  const isVisible3 =
+    useIsVisible(
+      ref3
+    ); /*for horizontal line animation (<hr> tag) because it fades in to 50% opacity only */
   return (
     <div>
-      <header className=" h-24">
-        <div className="flex justify-between">
+      <header ref={ref2} className=" h-24">
+        <div
+          className={`flex justify-between transition ease-in-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
+        >
           <Link>
             <img
               className="w-60 mt-6 mr-4"
@@ -50,11 +78,19 @@ function Results() {
           </Link>
         </div>
         <hr
-          className="mt-3 border-2
-        mix-blend-overlay opacity-50"
+          ref={ref3}
+          className={`mt-3 border-2
+        mix-blend-overlay
+        transition ease-in-out duration-700 ${isVisible3 ? "opacity-50" : "opacity-0"}
+        `}
         />
       </header>
-      <div className="flex justify-around">
+      <div
+        ref={ref1}
+        className={`flex justify-around 
+      transition ease-in-out duration-300 ${isVisible1 ? "opacity-100" : "opacity-0"} 
+      ease-in-out duration-700 ${isVisible1 ? "translate-x-0" : "translate-y-4"} `}
+      >
         <div className="flex flex-col items-center w-80">
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
