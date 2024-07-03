@@ -1,28 +1,34 @@
 - [ ] Consider recording the part of the app that works to show animtions and upload functionalty
-### OBJECTIVES (because categorizing them is taking too much time)
+### FUNCTIONAL OBJECTIVES (because categorizing them is taking too much time)
+- [ ] Add pop up window for details window
+- [ ] Add border to preview of document( needs caution because I ركحتها بالسيف)
+- [ ] Skip the passport and certificat pages temporarly to test a full unit of doucment upload , analysis and results +
+- [ ] Consider which version of title card to use (main branch VS alternate-card-size-test branch VS title-alt-3 )
 
 - [x] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe] 
 	- [x]  add the title card with icon on top middle and drop the form down (basically returning it to original position)
 	- [x] Consider scaling it up to occupy more space on top. Make it wider than the form cards which means it will have to be put seperatly between the form and the header and might mess up the image preview
 - [x] Add title card for the other two documents
-- [ ] Consider which version of title card to use (main branch VS alternate-card-size-test branch VS title-alt-3 )
+
 - [x] Add animation to progress bar (initial)
-- [ ] Add pop up window for details window
-- [ ] Add border to preview of document( needs caution because I ركحتها بالسيف)
-- [ ] add transition animation to the rest of the pages 
-- [ ] add animation to "details button" like the ones in other buttons for now
-- [ ] add pop in animation for icon result (zoom in+rotate and spring transition for the rotation)
-- [ ] Check background animation (find better ways maybe ? idk)
+
+
 - [x] Test page animation using UseRef() hook and opacitiy-transition
 - [x] Center every page the middle (veritcally and horizontally)
 - [x] Better style the uploaded image preview - make image stay in a fixed range , no layout shifting [in progress] (filename not wrapping is causing th width of the thing to increase )
 - [x] add smooth transtions between pages (added to Home and CIN)
 
+### Animations objectives
+- [ ] maybe add a smooth transition between before and after image preview shows up (form translates to side and preview pops in or something)
+- [ ] add pop in animation for icon result (zoom in+rotate and spring transition for the rotation) +
+- [ ] add animation to "details button" like the ones in other buttons for now +
+- [ ] add transition animation to the rest of the pages 
 
 ### Known issues
 - [x] Icon inside inputs offsets padding  [Last effort solution-> put the icon outside the input] 
-- [ ] Input icon overlaps the text when it surpasses a certa n amount of characters 
-- [ ] Logout button gradient doen't work with animations (and smooting them)
+- [ ] Input icon overlaps the text when it surpasses a certain n amount of characters 
+- [ ] Logout button gradient doesn't work with animations (and smoothing them)
+- [ ] Check background animation (find better ways maybe ? idk)
 ### Misc
 [ ] Recap very quickly "how to implement multi page in react" the way it was done here [in progress using LaTeX]
 ### High priority  [UNFINISHED]

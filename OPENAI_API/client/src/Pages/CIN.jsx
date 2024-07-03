@@ -305,7 +305,7 @@ function CIN() {
 
               "
               >
-                <Link to="/CertResid">التالي</Link>
+                <Link to="/Results">التالي</Link>
               </button>
             </div>
           </div>
