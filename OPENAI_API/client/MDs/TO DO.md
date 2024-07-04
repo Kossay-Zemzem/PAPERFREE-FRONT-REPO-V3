@@ -2,8 +2,8 @@
 ### FUNCTIONAL OBJECTIVES (because categorizing them is taking too much time)
 - [ ] Add pop up window for details window
 - [ ] Add border to preview of document( needs caution because I ركحتها بالسيف)
-- [ ] Skip the passport and certificat pages temporarly to test a full unit of doucment upload , analysis and results +
-- [ ] Consider which version of title card to use (main branch VS alternate-card-size-test branch VS title-alt-3 )
+- [x] Skip the passport and certificat pages temporarly to test a full unit of doucment upload , analysis and results +
+- [x] Consider which version of title card to use (main branch VS alternate-card-size-test branch VS title-alt-3 )
 
 - [x] add title / explanatory icon to each page (CIN , PASSEPORT  , etc....) [start with a figma concept maybe] 
 	- [x]  add the title card with icon on top middle and drop the form down (basically returning it to original position)
