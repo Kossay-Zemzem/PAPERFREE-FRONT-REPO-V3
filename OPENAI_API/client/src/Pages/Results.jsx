@@ -132,7 +132,7 @@ function Results() {
           </div>
           <div className="relative flex items-center">
             <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2 pointer-events-none" />
-            <button
+            <motion.button
               type="submit"
               className="
                 bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
@@ -147,7 +147,7 @@ function Results() {
                 "
             >
               <Link to="/">التفاصيل</Link>
-            </button>
+            </motion.button>
           </div>
           {/* <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " /> */}
           <IconResult progress={progressCIN} />
