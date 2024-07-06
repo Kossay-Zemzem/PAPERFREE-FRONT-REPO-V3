@@ -1,12 +1,13 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
 import IconResult from "./IconResult";
+import { spread } from "axios";
 
 function Results() {
   const [progressCIN, setProgressCIN] = useState(
@@ -114,16 +115,29 @@ function Results() {
       ease-in-out duration-700 ${isVisible1 ? "translate-x-0" : "translate-y-4"} `}
       >
         <div className="flex flex-col items-center w-80">
-          {isPopupVisible && (
-            <div
-              ref={popupRef}
-              className="absolute z-10 h-[450px] w-[850px] mb-3 mt-8
+          <AnimatePresence>
+            {isPopupVisible && (
+              <motion.div
+                initial={{ scale: 0.1 }}
+                animate={{
+                  scale: 1,
+                  transition: {
+                    scale: {
+                      type: "spring",
+                      duration: 1,
+                    },
+                  },
+                }}
+                exit={{ scale: 0.1, opacity: 0, transition: { duration: 0.5 } }}
+                ref={popupRef}
+                className="absolute z-10 h-[450px] w-[850px] mb-3 mt-8
            bg-yellow-400 border-2 border-gray-100 text-white text-center"
-            >
-              <p>POP UP PLACEHOLDER</p>
-              <button onClick={() => setIsPopupVisible(false)}>CLOSE</button>
-            </div>
-          )}
+              >
+                <p>POP UP PLACEHOLDER</p>
+                <button onClick={() => setIsPopupVisible(false)}>CLOSE</button>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
           </div>
