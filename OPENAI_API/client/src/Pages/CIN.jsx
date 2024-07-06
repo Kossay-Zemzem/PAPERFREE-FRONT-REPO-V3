@@ -70,6 +70,13 @@ function CIN() {
       console.log("Error making the Chat GPT request" + error);
     }
   };
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [id]: value,
+    }));
+  };
   /* function that detects when elements are on screen and returns true, used for page animations  */
   function useIsVisible(ref) {
     const [isIntersecting, setIntersecting] = useState(false);
@@ -254,7 +261,25 @@ function CIN() {
                 required
               />
             </div>
-
+            <div className="mb-5">
+              <input
+                placeholder="Birthdate"
+                type="date"
+                id="birthDate"
+                onChange={handleInputChange}
+                className="
+                bg-[#D9D9D9]
+              border border-red-600 rounded-lg
+              block w-full p-1.5
+             text-black text-xl text-center
+             placeholder-gray-400 placeholder:text-center 
+             focus:ring-2             
+             focus:ring-[#057933]
+             hover:scale-110 ease-in-out duration-300
+                "
+                required
+              />
+            </div>
             <div
               className="flex flex-row items-center mb-5
                     hover:scale-110 ease-in-out duration-300"
