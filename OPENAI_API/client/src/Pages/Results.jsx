@@ -54,99 +54,113 @@ function Results() {
     useIsVisible(
       ref3
     ); /*for horizontal line animation (<hr> tag) because it fades in to 50% opacity only */
-    
-    const [isPopupVisible, setIsPopupVisible] = useState(false);
-    return (
-      <div>
-        <header ref={ref2} className=" h-24">
-          <div
-            className={`flex justify-between transition ease-in-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
-          >
-            <Link>
-              <img
-                className="w-60 mt-6 mr-4"
-                src="../public/images/logoBETA.png"
-              />
-            </Link>
-            <Link to="/">
-              <div
-                className="text-white border
+
+  // code for Handeling Popup window functionality and click outside to close event
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        setIsPopupVisible(false); // Step 3: Check if the click is outside the popup
+      }
+    }
+
+    // Step 2: Add a click event listener to the document
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      // Step 4: Cleanup
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div>
+      <header ref={ref2} className=" h-24">
+        <div
+          className={`flex justify-between transition ease-in-out duration-700 ${isVisible1 ? "opacity-100" : "opacity-0"}`}
+        >
+          <Link>
+            <img
+              className="w-60 mt-6 mr-4"
+              src="../public/images/logoBETA.png"
+            />
+          </Link>
+          <Link to="/">
+            <div
+              className="text-white border
             p-1 ml-6 mt-5
             hover:bg-red-600 ease-in-out duration-500
             hover:scale-105
             "
-              >
-                خروج
-                <ArrowLeftStartOnRectangleIcon className="inline-block w-6 h-6 text-white ml-3s mr-2" />
-              </div>
-            </Link>
-          </div>
-          <hr
-            ref={ref3}
-            className={`mt-3 border-2
+            >
+              خروج
+              <ArrowLeftStartOnRectangleIcon className="inline-block w-6 h-6 text-white ml-3s mr-2" />
+            </div>
+          </Link>
+        </div>
+        <hr
+          ref={ref3}
+          className={`mt-3 border-2
         mix-blend-overlay
         transition ease-in-out duration-700 ${isVisible3 ? "opacity-50" : "opacity-0"}
         `}
-          />
-        </header>
-        <div
-          ref={ref1}
-          className={`flex justify-around 
+        />
+      </header>
+      <div
+        ref={ref1}
+        className={`flex justify-around 
       transition ease-in-out duration-300 ${isVisible1 ? "opacity-100" : "opacity-0"} 
       ease-in-out duration-700 ${isVisible1 ? "translate-x-0" : "translate-y-4"} `}
-        >
-          <div className="flex flex-col items-center w-80">
-            {isPopupVisible && (
-              <div
-                className="absolute z-10 h-[450px] w-[850px] mb-3 mt-8
+      >
+        <div className="flex flex-col items-center w-80">
+          {isPopupVisible && (
+            <div
+              ref={popupRef}
+              className="absolute z-10 h-[450px] w-[850px] mb-3 mt-8
            bg-yellow-400 border-2 border-gray-100 text-white text-center"
-              >
-                POP UP PLACEHOLDER
-              </div>
-            )}
-            <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
-              CIN animation placeholder
+            >
+              <p>POP UP PLACEHOLDER</p>
+              <button onClick={() => setIsPopupVisible(false)}>CLOSE</button>
             </div>
+          )}
+          <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
+            CIN animation placeholder
+          </div>
 
-            <div
-              className=" bg-gray-200 h-4 rounded-full w-full"
-              style={{ direction: "ltr" }}
-            >
-              <motion.div
-                className={`${getProgressBarColor(progressCIN)} h-full rounded-full `}
-                initial={{ width: 0, opacity: 0 }}
-                animate={{
-                  width: `${progressCIN}%`,
-                  opacity: 1,
-                  transition: {
-                    width: {
-                      ease: "easeInOut",
-                      duration: 1,
-                    },
-                    opacity: {
-                      duration: 0.1,
-                    },
-                  },
-                }}
-              ></motion.div>
-              {/*             <div
+          <div
+            className=" bg-gray-200 h-4 rounded-full w-full"
+            style={{ direction: "ltr" }}
+          >
+            <motion.div
               className={`${getProgressBarColor(progressCIN)} h-full rounded-full `}
-              style={{
+              initial={{ width: 0, opacity: 0 }}
+              animate={{
                 width: `${progressCIN}%`,
+                opacity: 1,
+                transition: {
+                  width: {
+                    ease: "easeInOut",
+                    duration: 1,
+                  },
+                  opacity: {
+                    duration: 0.1,
+                  },
+                },
               }}
-            ></div> */}
-            </div>
-            <div
-              className="text-white text-center mt-1
+            ></motion.div>
+          </div>
+          <div
+            className="text-white text-center mt-1
           "
-            >
-              تواقف بنسبة {progressCIN} %
-            </div>
-            <div className="relative flex items-center">
-              <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2 pointer-events-none" />
-              <motion.button
-                type="submit"
-                className="
+          >
+            تواقف بنسبة {progressCIN} %
+          </div>
+          <div className="relative flex items-center">
+            <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2 pointer-events-none" />
+            <motion.button
+              type="submit"
+              className="
                 bg-gradient-to-b from-[#FED33D] from-15% to-[#F67C0B]
                 rounded-lg
                 text-black text-lg 
@@ -157,16 +171,17 @@ function Results() {
                 hover:ease-in-out duration-500
                 hover:
                 "
-              >
-                <Link to="/">التفاصيل</Link>
-              </motion.button>
-            </div>
-            {/* <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " /> */}
-            <IconResult progress={progressCIN} />
+              onClick={() => setIsPopupVisible(true)}
+            >
+              <Link to="">التفاصيل</Link>
+            </motion.button>
           </div>
+          {/* <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " /> */}
+          <IconResult progress={progressCIN} />
         </div>
       </div>
-    );
+    </div>
+  );
 }
 
 export default Results;
