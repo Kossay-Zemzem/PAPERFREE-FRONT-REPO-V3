@@ -124,11 +124,11 @@ function Results() {
                   transition: {
                     scale: {
                       type: "spring",
-                      duration: 1,
+                      duration: 0.8,
                     },
                   },
                 }}
-                exit={{ scale: 0.1, opacity: 0, transition: { duration: 0.5 } }}
+                exit={{ scale: 0.1, opacity: 0, transition: { duration: 0.4 } }}
                 ref={popupRef}
                 className="absolute z-10 h-[450px] w-[850px] mb-3 mt-8
            bg-yellow-400 border-2 border-gray-100 text-white text-center"
@@ -165,12 +165,22 @@ function Results() {
             ></motion.div>
           </div>
           <div
-            className="text-white text-center mt-1
+            className="text-white text-center mt-1 mb-4
           "
           >
             تواقف بنسبة {progressCIN} %
           </div>
-          <div className="relative flex items-center">
+          <motion.div
+            className="relative flex items-center"
+            initial={{
+              y: 0,
+            }}
+            whileHover={{
+              y: -2,
+              boxShadow:
+                "rgba(0, 0, 0, 0.25) 0px 4px 5px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px",
+            }}
+          >
             <ChatBubbleLeftEllipsisIcon className="w-6 h-6 text-black absolute ml-3s mr-2 pointer-events-none" />
             <motion.button
               type="submit"
@@ -180,7 +190,7 @@ function Results() {
                 text-black text-lg 
                 text-center
                 font-semibold
-                pl-2 pr-9 py-2 mt-2 mb-2
+                pl-2 pr-9 py-2
 
                 hover:ease-in-out duration-500
                 hover:
@@ -189,7 +199,7 @@ function Results() {
             >
               <Link to="">التفاصيل</Link>
             </motion.button>
-          </div>
+          </motion.div>
           {/* <CheckCircleIcon className="text-green-500 inline-block mr-2 w-10 h-10 " /> */}
           <IconResult progress={progressCIN} />
         </div>

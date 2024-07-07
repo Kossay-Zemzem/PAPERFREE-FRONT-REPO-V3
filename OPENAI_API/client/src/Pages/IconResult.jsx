@@ -29,7 +29,7 @@ function IconResult(props) {
           },
         }}
       >
-        <CheckCircleIcon className="text-green-500 inline-block w-14 h-14 " />
+        <CheckCircleIcon className="text-green-500 inline-block w-14 h-14 mt-4" />
       </motion.div>
     );
   } else {
@@ -58,7 +58,7 @@ function IconResult(props) {
           },
         }}
       >
-        <XCircleIcon className="text-red-600 inline-block w-14 h-14" />
+        <XCircleIcon className="text-red-600 inline-block w-14 h-14 mt-4" />
       </motion.div>
     );
   }
