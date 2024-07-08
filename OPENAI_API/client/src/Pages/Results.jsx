@@ -6,6 +6,7 @@ import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { ArrowLeftStartOnRectangleIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon } from "@heroicons/react/16/solid";
 import IconResult from "./IconResult";
 import { spread } from "axios";
 
@@ -116,27 +117,36 @@ function Results() {
       >
         <div className="flex flex-col items-center w-80">
           <AnimatePresence>
-            {isPopupVisible && (
-              <motion.div
-                initial={{ scale: 0.1 }}
-                animate={{
-                  scale: 1,
-                  transition: {
-                    scale: {
-                      type: "spring",
-                      duration: 0.8,
+            {
+              /* isPopupVisible */ true && (
+                <motion.div
+                  initial={{ scale: 0.1 }}
+                  animate={{
+                    scale: 1,
+                    transition: {
+                      scale: {
+                        type: "spring",
+                        duration: 0.8,
+                      },
                     },
-                  },
-                }}
-                exit={{ scale: 0.1, opacity: 0, transition: { duration: 0.4 } }}
-                ref={popupRef}
-                className="absolute z-10 h-[450px] w-[850px] mb-3 mt-8
-           bg-yellow-400 border-2 border-gray-100 text-white text-center"
-              >
-                <p>POP UP PLACEHOLDER</p>
-                <button onClick={() => setIsPopupVisible(false)}>CLOSE</button>
-              </motion.div>
-            )}
+                  }}
+                  exit={{
+                    scale: 0.1,
+                    opacity: 0,
+                    transition: { duration: 0.4 },
+                  }}
+                  ref={popupRef}
+                  className="absolute z-10 top-96 h-[220px] w-[400px] 
+                  flex flex-col
+           bg-zinc-100 border-2 border-gray-100 text-black text-center"
+                >
+                  <button onClick={() => setIsPopupVisible(false)}>
+                    <XMarkIcon className="absolute w-8 text-red-600" />
+                  </button>
+                  <p>POP UP PLACEHOLDER</p>
+                </motion.div>
+              )
+            }
           </AnimatePresence>
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
