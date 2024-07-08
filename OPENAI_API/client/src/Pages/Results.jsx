@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, easeInOut } from "framer-motion";
 
 import { ChatBubbleLeftEllipsisIcon } from "@heroicons/react/24/solid";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
@@ -120,7 +120,7 @@ function Results() {
             {
               /* isPopupVisible */ true && (
                 <motion.div
-                  initial={{ scale: 0.1 }}
+                  initial={{ scale: 0.1, borderColor: "#F67C0B" }}
                   animate={{
                     scale: 1,
                     transition: {
@@ -135,10 +135,23 @@ function Results() {
                     opacity: 0,
                     transition: { duration: 0.4 },
                   }}
+                  whileInView={{
+                    borderStyle: "solid",
+                    borderColor: "#FED33D",
+                    borderWidth: "2px",
+                    transition: {
+                      borderColor: {
+                        repeat: Infinity,
+                        repeatType: "reverse",
+                        duration: 1,
+                        ease: "easeInOut",
+                      },
+                    },
+                  }}
                   ref={popupRef}
                   className="absolute z-10 top-96 h-[220px] w-[400px] 
                   flex flex-col
-           bg-zinc-100 border-2 border-gray-100 text-black text-center"
+           bg-black bg-opacity-35 text-white text-center"
                 >
                   <button onClick={() => setIsPopupVisible(false)}>
                     <XMarkIcon className="absolute w-8 text-red-600" />
@@ -148,6 +161,7 @@ function Results() {
               )
             }
           </AnimatePresence>
+
           <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
           </div>
@@ -201,9 +215,7 @@ function Results() {
                 text-center
                 font-semibold
                 pl-2 pr-9 py-2
-
                 hover:ease-in-out duration-500
-                hover:
                 "
               onClick={() => setIsPopupVisible(true)}
             >
