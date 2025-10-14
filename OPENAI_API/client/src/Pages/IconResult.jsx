@@ -3,7 +3,7 @@ import { XCircleIcon } from "@heroicons/react/24/solid";
 import { delay, easeInOut, motion, spring } from "framer-motion";
 
 function IconResult(props) {
-  if (props.progress > 80 && props.progress <= 100) {
+  if (props.progress > 99 && props.progress <= 100) {
     return (
       <motion.div
         initial={{

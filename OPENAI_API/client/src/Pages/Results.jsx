@@ -11,9 +11,10 @@ import IconResult from "./IconResult";
 import { spread } from "axios";
 
 function Results() {
-  const [progressCIN, setProgressCIN] = useState(
-    parseFloat((Math.random() * 101).toFixed(2))
-  ); // Set the initial progress value for CIN
+  // const [progressCIN, setProgressCIN] = useState(
+  //   parseFloat((Math.random() * 101).toFixed(2))
+  // ); // Set the initial progress value for CIN
+  const [progressCIN, setProgressCIN] = useState(87.99);
   const [progressPass, setProgressPass] = useState(50); // Set the initial progress value for Passeport
   const [progressCert, setProgressCert] = useState(20); // Set the initial progress value for Certificat de residance
 
@@ -21,9 +22,9 @@ function Results() {
     //function that determines the color of the progress bar
     if (progress >= 0 && progress <= 30) {
       return "bg-red-500"; // Red color for 0 to 30%
-    } else if (progress > 30 && progress <= 80) {
+    } else if (progress > 30 && progress <= 99) {
       return "bg-yellow-500"; // Yellow color for 31 to 80%
-    } else if (progress > 80 && progress <= 100) {
+    } else if (progress > 99 && progress <= 100) {
       return "bg-green-500"; // Green color for 81 to 100%
     } else {
       return "bg-gray-500"; // Default color if progress is out of expected range
@@ -152,18 +153,76 @@ function Results() {
                 ref={popupRef}
                 className="absolute z-10 top-96 h-[220px] w-[400px] 
                   flex flex-col
-           bg-black bg-opacity-35 text-white text-center"
+           bg-black bg-opacity-35 text-white "
               >
                 <motion.button onClick={() => setIsPopupVisible(false)}>
                   <XMarkIcon className="absolute w-8 text-red-600 right-2 top-1" />
                 </motion.button>
-                <p>POP UP PLACEHOLDER</p>
+                <p className="text-xl text-center text-yellow-400 font-lalezar mt-2 ">
+                  تفاصبل معاينة البطاقة{" "}
+                </p>
+                <pre className="text-xs"> </pre>
+                <p className="mb-2 mr-3">✅ رقم البطاقة مطابق</p>
+                <p className="mb-2 mr-3">✅ اللقب مطابق</p>
+                <p className="mb-2 mr-3">✅ الإسم مطابق</p>
+                <p className="mb-2 mr-3">
+                  ❌ تاريخ الولادة " 2 جانفي 2002 " غير مطابق{" "}
+                </p>
+                <p className="mb-2 mr-3">✅ مكانها مطابق </p>
               </motion.div>
+              //     <motion.div
+              //       initial={{ scale: 0.1, borderColor: "#0000" }}
+              //       animate={{
+              //         scale: 1,
+              //         transition: {
+              //           scale: {
+              //             type: "spring",
+              //             duration: 0.8,
+              //           },
+              //         },
+              //       }}
+              //       exit={{
+              //         scale: 0.1,
+              //         opacity: 0,
+              //         transition: { duration: 0.4 },
+              //       }}
+              //       whileInView={{
+              //         borderStyle: "solid",
+              //         borderColor: "#FED33D",
+              //         borderWidth: "2px",
+              //         borderRadius: 4,
+
+              //         transition: {
+              //           borderColor: {
+              //             repeat: Infinity,
+              //             repeatType: "reverse",
+              //             duration: 2,
+              //             ease: "easeIn",
+              //           },
+              //         },
+              //       }}
+              //       ref={popupRef}
+              //       className="absolute z-10 top-96 h-[220px] w-[400px] 
+              //         flex flex-col
+              //  bg-black bg-opacity-35 text-white text-center"
+              //     >
+              //       <motion.button onClick={() => setIsPopupVisible(false)}>
+              //         <XMarkIcon className="absolute w-8 text-red-600 right-2 top-1" />
+              //       </motion.button>
+              //       <p>POP UP PLACEHOLDER</p>
+              //     </motion.div>
             )}
           </AnimatePresence>
 
-          <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
+          {/* <div className="h-44 w-full mb-3 border-2 border-gray-100 text-white text-center">
             CIN animation placeholder
+          </div> */}
+          <div className="flex items-center justify-center h-44 w-72 mb-5  text-white text-center ">
+            <img
+              className="w-[470px] p-1 border-2 border-gray-100"
+              src="../public/images/CIN test.jpg"
+            />
+            {/* Placeholder Image source: https://upload.wikimedia.org/wikipedia/commons/e/e2/Carte_d%27identit%C3%A9_tunisienne_recto2.jpg */}
           </div>
 
           <div
